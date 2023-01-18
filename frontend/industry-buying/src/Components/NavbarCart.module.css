@@ -1,0 +1,42 @@
+.navbar{
+    width:100%;
+    background-color: #232F3E;
+    height:64px;
+    box-sizing: border-box;
+    position: fixed;
+    top: 16px;
+    z-index:111;
+    color: white;
+    border:2px solid green;
+    display: flex;
+}
+
+.leftSide{
+    border:1px solid white;
+    box-sizing: border-box;
+    width: 50%;
+}
+
+.rightSide{
+    border:1px solid yellow;
+    box-sizing: border-box;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.rightSide .textIconWrapper .headingText2{
+    text-transform: uppercase;
+}
+
+.rightSide .textIconWrapper{
+    display: flex;
+    align-items: center;
+}
+
+.rightSide .textIconWrapper .textWrapper{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
