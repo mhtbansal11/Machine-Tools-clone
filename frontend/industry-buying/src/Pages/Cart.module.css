@@ -1,0 +1,38 @@
+.pageWrapper{
+    display: flex;
+    width: 95%;
+    margin: auto;
+    background-color: white;
+    margin-top: 80px;
+    height: 100vh;
+}
+
+.pageLeftside{
+    border: 1px solid black;
+    width: 60%;
+}
+
+.pageRightside{
+    border:1px solid maroon;
+    width:40%;
+}
+
+.pageRightside .textSymbolWrapper{
+display: flex;
+margin: auto;
+justify-content: space-between;
+align-items: center;
+background-color: #4D4D4D;
+color: white;
+padding: 0 14px;
+height: 44px;
+box-sizing: border-box;
+/* font-family: Open Sans Semibold; */
+font-size: 16px;
+border-bottom: 1px solid #e8e8e8;
+font-weight: 600;
+}
+
+.textSymbolWrapper>div:nth-child(2){
+    font-size: 28px;
+}
