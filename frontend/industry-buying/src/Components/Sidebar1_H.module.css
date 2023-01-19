@@ -1,0 +1,45 @@
+.sidebar_container{
+    border: 1px solid grey;
+    height:90vh;
+    width:30%;
+    background-color: #f3f3f3;
+}
+.Categories{
+    text-decoration: none;
+    color: #2d8ed2;
+    font-size: 14px;
+    padding: 6px 165px 6px 16px;
+    float: none;
+    display: block;
+    background: #f8f8f8;
+    cursor: pointer;
+}
+.Categories:hover{
+    text-decoration: underline;
+}
+.offer{
+    height:75px;
+    float: none;
+    display: block;
+    background:white;
+    border: 0px solid silver;
+    display: flex;
+}
+.offer>div{
+    border: 1px solid #dfdfdf;
+    width:34%;
+    border-left: 0px;
+    cursor: pointer;
+}
+.offer>div>img{
+    width:38%;
+    margin: auto;
+    margin-top: 5%;
+}
+.offer>div>p{
+    font-size:11px;
+    color: #666666;
+}
+#saleoffer{
+    margin-top:1%;
+}
