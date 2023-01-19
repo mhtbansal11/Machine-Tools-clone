@@ -1,0 +1,22 @@
+.productCard{
+    display: flex;
+    border: 2px solid green;
+    padding: 0;
+    justify-content: space-around;
+}
+
+
+.productDetails{
+    border: 2px solid blue;
+    width:40%
+}
+
+.quantityDetails{
+    border:2px solid yellow;
+    width: 25%;
+}
+
+.priceDetails{
+    border: 2px solid violet;
+    width:35%;
+}

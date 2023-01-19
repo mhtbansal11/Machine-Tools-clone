@@ -1,5 +1,5 @@
 import './App.css';
-import { Cart } from './Pages/Cart';
+// import { Cart } from './Pages/Cart';
 
 
 
@@ -12,6 +12,7 @@ function App() {
    
 
    <AllRoutes/>
+   
 
     </div>
   );

@@ -1,10 +1,14 @@
+.cartPage{
+    background-color: #fff;
+}
+
 .pageWrapper{
     display: flex;
     width: 95%;
     margin: auto;
     background-color: white;
     margin-top: 80px;
-    height: 100vh;
+    color:black;
 }
 
 .pageLeftside{
@@ -35,4 +39,17 @@ font-weight: 600;
 
 .textSymbolWrapper>div:nth-child(2){
     font-size: 28px;
+}
+
+
+.cartTotalQuantity{
+    border:1px solid black;
+    color: black;
+    text-align: left;
+    padding: 4px;
+}
+
+.productCardWrapper{
+    overflow-y: scroll;
+    height: 90vh;
 }
