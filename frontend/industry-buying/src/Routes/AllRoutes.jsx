@@ -20,7 +20,7 @@ export function AllRoutes() {
         <Route path="/cart" element={<Cart /> }/>    
         <Route path="/payment" element={<Payment />} />
         <Route path="/login" element={<LoginPage />} />
-       
+
       </Routes>
   
   );
