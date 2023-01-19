@@ -1,8 +1,6 @@
 import './App.css';
-import SimpleSidebar from './Components/Sidebar1_H';
 // import SidebarContent from './Components/Sidebar1_H';
 // import Sidebar1_H from './Components/Sidebar1_H';
-import { Cart } from './Pages/Cart';
 
 
 
@@ -15,6 +13,8 @@ function App() {
    
 
    <AllRoutes/>
+   
+
     {/* <SidebarContent /> */}
     
     </div>

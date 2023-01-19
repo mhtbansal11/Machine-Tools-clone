@@ -1,19 +1,39 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import styles from "./Cart.module.css"
 import {HiOutlineCurrencyRupee} from "react-icons/hi"
 import {CiPercent} from "react-icons/ci"
-import {Input, InputGroup, InputRightElement} from "@chakra-ui/react"
+// import {Input, InputGroup, InputRightElement} from "@chakra-ui/react"
 import { NavbarCart } from '../Components/NavbarCart'
+import { useDispatch, useSelector } from 'react-redux'
+import { getCartData } from '../Redux/CartReducer/action'
+import { CartProduct } from '../Components/CartProduct'
 
 export const Cart = () => {
+
+const dispatch = useDispatch();
+const data = useSelector((store)=>store.cartReducer.cartItem)
+console.log(data)
+
+useEffect(()=>{
+  dispatch(getCartData())
+},[])
+
+
   return (
-    <>
+    <div className={styles.cartPage}>
     <NavbarCart/>
     <div className={styles.pageWrapper}>
         <div className={styles.pageLeftside}>
-
+          <div className={styles.cartTotalQuantity}>
+            <p>My Cart:({data.length}items)</p>
+          </div>
+          <div className={styles.productCardWrapper}>
+            {
+              data.map((el)=><CartProduct key={el.image} {...el}/>)
+            }
+          </div>
         </div>
-
+{/* **************************RIGHT SIDE************************ */}
         <div className={styles.pageRightside}>
           <div>
           <div className={styles.textSymbolWrapper}>
@@ -46,7 +66,7 @@ export const Cart = () => {
        
         </div>
     </div>
-    </>
+    </div>
     
   )
 }
