@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import styles from "./Cart.module.css"
 import {HiOutlineCurrencyRupee} from "react-icons/hi"
-import {CiPercent} from "react-icons/ci"
+import {TbDiscount2} from "react-icons/tb"
 // import {Input, InputGroup, InputRightElement} from "@chakra-ui/react"
 import { NavbarCart } from '../Components/NavbarCart'
 import { useDispatch, useSelector } from 'react-redux'
@@ -16,7 +16,7 @@ console.log(data)
 
 useEffect(()=>{
   dispatch(getCartData())
-},[])
+},[dispatch])
 
 
   return (
@@ -45,14 +45,14 @@ useEffect(()=>{
         <div>
         <div className={styles.textSymbolWrapper}>
                     <div>Partner Offers</div>
-                    <div><CiPercent/></div>
+                    <div><TbDiscount2/></div>
                 </div>
         </div>
        
        <div>
        <div className={styles.textSymbolWrapper}>
             <div>Offers Available</div>
-            <div><CiPercent/></div>
+            <div><TbDiscount2/></div>
         </div>
         {/* <InputGroup size='sm'>
           <Input placeholder='Enter Coupon Code' focusBorderColor='black'/>
