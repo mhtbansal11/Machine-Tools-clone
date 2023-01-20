@@ -7,8 +7,8 @@ const ButtonComp = () => {
     <div className='button'>
    
    
-    <Button colorScheme='red' variant='outline' onClick={console.log("bdcvg")}>ADD TO CART</Button>
-    <button onClick={console.log("dbgcyds")}>BUY NOW</button>
+    <Button colorScheme='red' variant='outline' >ADD TO CART</Button>
+    <button >BUY NOW</button>
     </div>
   )
 }
