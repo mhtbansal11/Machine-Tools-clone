@@ -7,11 +7,11 @@ export const getProductData = ()=> (dispatch)=>
 {
     dispatch({type: types.GET_PRODUCT_REQUEST})
     return axios
-        .get(`https://zany-cyan-angelfish-tutu.cyclic.app/Machine&Tools`)
+        .get(`https://zany-cyan-angelfish-tutu.cyclic.app/grain_Processing_Machine`)
         .then(res=>{
-            dispatch({type: types.GET_PRODUCT_SUCCESS, payload: res.data[0].grain_Processing_Machine})
+            dispatch({type: types.GET_PRODUCT_SUCCESS, payload: res.data})
            
-            console.log(res.data[0].grain_Processing_Machine)
+            console.log(res.data)
         })
         .catch(err=>dispatch({type: types.GET_PRODUCT_ERROR}))
 }
