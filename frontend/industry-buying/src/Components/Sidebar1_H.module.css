@@ -43,3 +43,12 @@
 #saleoffer{
     margin-top:1%;
 }
+.sub{
+   display: none;
+}
+.sub:hover{
+    border: 1px solid;
+    margin-left: 100%;
+    width: 100%;
+    display:block;
+}
