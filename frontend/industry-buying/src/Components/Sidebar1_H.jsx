@@ -1,5 +1,5 @@
 import styles from "./Sidebar1_H.module.css";
-import React, { ReactNode } from 'react';
+// import React, { ReactNode } from 'react';
 import {
   IconButton,
   Box,
@@ -9,15 +9,9 @@ import {
   Link,
   Drawer,
   DrawerContent,
-  Text,
   useDisclosure,
 } from '@chakra-ui/react';
 import {
-  FiHome,
-  FiTrendingUp,
-  FiCompass,
-  FiStar,
-  FiSettings,
   FiMenu,
 } from 'react-icons/fi';
 import {
@@ -44,8 +38,7 @@ import {
   BiBed,
 } from 'react-icons/bi'
 
-
-
+  
 const LinkItems = [
   { name: 'Agriculture Garden & Landscaping', icon: CiForkAndKnife},
   { name: 'Power Tools', icon: GiDrill },
@@ -84,8 +77,8 @@ export default function SimpleSidebar({ children }) {
         </DrawerContent>
       </Drawer>
       {/* mobilenav */}
-      <MobileNav display={{ base: 'flex', md: 'none' }} onOpen={onOpen} />
-      <Box ml={{ base: 0, md: 120 }} p="4">
+      <MobileNav display={{ base: 'flex', md: 'none'}} onOpen={onOpen} />
+      <Box ml={{ base: 0, md: 200 }} p="4">
         {children}
       </Box>
     </Box>
@@ -108,6 +101,9 @@ const SidebarContent = ({ onClose, ...rest }) => {
           {link.name}
         </NavItem>
       ))}
+      <div className={styles.sub}>
+        <div>Hello</div>
+      </div>
       <a className={styles.Categories} href="">See All Categories</a>
       <div className={styles.offer}>
         <div>
@@ -177,10 +173,6 @@ const MobileNav = ({ onOpen, ...rest }) => {
         aria-label="open menu"
         icon={<FiMenu />}
       />
-
-      <Text fontSize="2xl" ml="8" fontFamily="monospace" fontWeight="bold">
-        Logo
-      </Text>
     </Flex>
   );
 };

@@ -1,0 +1,70 @@
+#sidebar_container{
+border: 1px solid #dfdfdf;
+width: 25%;
+height: 100vh;
+background-color: #fbfbfb;
+}
+h3{
+    font-size: 13px;
+    color: #5a6475;
+}
+#border{
+    border-bottom: 1px dashed rgb(204, 204, 204);
+    text-align: left;
+    margin-left: 20px;
+    margin-top: 4%;
+    padding-bottom:3%;
+    width:87%;
+}
+#arrow{
+    display: flex;
+    margin-top:4%;
+}
+#arrow>h2{
+    margin-left:8px;
+    color: #636677;
+    font-size:14.5px;
+}
+#orrange{
+    padding-left:10%;
+    color: #e45301;
+    font-size: 14.5px;
+}
+#brand_heading{
+    margin-top:5%;
+    text-align: left;
+    width: 87%;
+    margin-left: 20px;
+}
+.input_container{
+    border-bottom: 1px solid rgb(204, 204, 204);
+    width: 90%;
+    margin-left:17px;
+    margin-top: 4%;
+    padding:4px;
+    display: flex;
+}
+.input_container>input{
+    outline-style: none;
+    font-style: italic;
+    font-size: 13px;
+    width:97%; 
+    background-color: #fbfbfb;
+    text-align: left;   
+}
+.input_container>img{
+    width:20px;
+}
+.brandSearch{
+    width: 87%;
+    margin-top:4%;
+    margin-left:18px;
+    height:110px;
+    overflow-y: scroll;
+}
+.brandSearch>div{
+    display: flex;
+}
+.brandSearch>div>p{
+    margin-left: 2%;
+}
