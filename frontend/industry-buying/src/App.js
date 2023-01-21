@@ -1,5 +1,4 @@
 import './App.css';
-import { Cart } from './Pages/Cart';
 // import SidebarContent from './Components/Sidebar1_H';
 // import Sidebar1_H from './Components/Sidebar1_H';
 
@@ -13,8 +12,9 @@ function App() {
     <div className="App">
    
 
-   {/* <AllRoutes/> */}
-    <Cart/>
+   <AllRoutes/>
+   
+
     {/* <SidebarContent /> */}
     
     </div>
