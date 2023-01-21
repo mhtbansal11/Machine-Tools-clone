@@ -1,5 +1,6 @@
 .cartPage{
     background-color: #fff;
+    font-size: 16px;
 }
 
 .pageWrapper{
@@ -13,12 +14,41 @@
 
 .pageLeftside{
     border: 1px solid black;
-    width: 60%;
+    width: 70%;
+}
+
+.orderHeading{
+    display: flex;
+    justify-content: space-between;
+    color: #444;
+    font-size: 0.875em;
+    border: 1px solid orange;
+    background-color: #f7f7f7;
+}
+
+.orderHeading p{
+    padding: 10px 12px;
+}
+
+.itemHeading{
+    border: 1px solid blueviolet;
+    width: 40%;
+    font-size: 1rem;
+}
+
+.quantityHeading{
+    border: 1px solid green;
+    width: 25%;
+}
+
+.priceHeading{
+    border: 1px solid black;
+    width: 35%;
 }
 
 .pageRightside{
     border:1px solid maroon;
-    width:40%;
+    width:30%;
 }
 
 .pageRightside .textSymbolWrapper{
@@ -52,4 +82,26 @@ font-weight: 600;
 .productCardWrapper{
     overflow-y: scroll;
     height: 90vh;
+}
+
+
+.pageRightside .shippingText{
+    color: #444;
+    font-size: 14px;
+    text-align: left;
+    display: flex;
+    align-items: center;
+}
+
+
+.pageRightside .offerText{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #FFFAEF;
+    box-sizing: border-box;
+    border:1px dashed black;
+    margin: 8px 16px;
+    padding: 8px 44px 8px 8px;
+    text-align: left;
+    color: #444;
+    font-size: 14px;
 }

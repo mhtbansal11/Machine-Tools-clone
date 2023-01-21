@@ -1,51 +1,31 @@
-import axios from "axios";
-import { GET_PRODUCT_ERROR, GET_PRODUCT_REQUEST, GET_PRODUCT_SUCCESS, UPDATE_PRODUCT_SUCCESS } from "./actionType";
-
-const getCartDataRequestAction = () =>{
-    return {type:GET_PRODUCT_REQUEST}
-}
-
-const getCartDataSuccessAction = (payload) =>{
-    return {type:GET_PRODUCT_SUCCESS,payload}
-}
-
-const getCartDataFailureAction = () =>{
-    return {type:GET_PRODUCT_ERROR}
-}
-
-const updateCartDataSuccess = (payload) =>{
-    return {type:UPDATE_PRODUCT_SUCCESS,payload}   
-}
-
-
-// ************************API REQUEST**************************
-
-
-export const getCartData = () => (dispatch) =>{
-dispatch(getCartDataRequestAction())
-
-return axios.get(`https://zany-cyan-angelfish-tutu.cyclic.app/cart`).then((res)=>{dispatch(getCartDataSuccessAction(res.data))}).catch((err)=>{dispatch(getCartDataFailureAction())})
-}
-
-
-
-
-export const updateCartData = (id,quantity) => async(dispatch) =>{
-//   return axios.patch(`https://zany-cyan-angelfish-tutu.cyclic.app/cart/${id}`,quantity).then((res)=>{dispatch(updateCartDataSuccess(res.data))})
-
-// let data = await axios
-try{
-let data= await axios.patch(`https://zany-cyan-angelfish-tutu.cyclic.app/cart/${id}`,{...quantity})
-dispatch(getCartData())
-console.log(data);
-return data;
-}
-catch(er){
-console.log(er)
-}
-
-
-}
-
-
-//
+import { updateappicart } from "./api";
+import {
+    CART_LOADING,
+    CART_ERROR,
+    ADD_TO_CART,
+    REMOVE_FROM_CART,
+    GET_CART,
+    UPDATE_CART
+  } from "./actionType";
+  import { AddToCartApi, DelCartItemApi, GetCartDataApi } from "./api";
+  
+  export const addToCart = (el) => async (dispatch) => {
+    dispatch({ type: CART_LOADING });
+    let data = await AddToCartApi(el);
+    dispatch({ type: ADD_TO_CART, payload: el });
+  };
+  
+  export const removeToCart = (id) => async (dispatch) => {
+    let data = await DelCartItemApi(id);
+    dispatch({ type: REMOVE_FROM_CART, payload: id });
+  };
+  
+  export const getCartItem = () => async (dispatch) => {
+    dispatch({ type: CART_LOADING });
+    let data = await GetCartDataApi();
+    dispatch({ type: GET_CART, payload: data });
+  };
+  export const updateCart=(id,el)=>async (dispatch)=>{
+    let data = await updateappicart(id,el);
+    dispatch({type:UPDATE_CART,payload:{id,ele:el}})
+  }

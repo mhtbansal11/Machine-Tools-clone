@@ -20,3 +20,7 @@
     border: 2px solid violet;
     width:35%;
 }
+
+.productImg:hover{
+    transform: scale(1);
+}
