@@ -24,7 +24,7 @@ const ProductPage = () => {
         {/* div for heading */}
         <div>
         <Heading mb={4} p={2}   >
-Grain Processing Machine
+        Grain Processing Machine
             </Heading>
         </div>
            

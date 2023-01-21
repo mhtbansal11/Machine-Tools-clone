@@ -1,6 +1,6 @@
 import React from 'react'
 import {Button} from "@chakra-ui/react"
-import styles from "./ProductCard.css"
+import styles from "./ProductCard.module.css"
 
 import { Link } from 'react-router-dom'
 import { useDispatch } from 'react-redux'
@@ -14,13 +14,17 @@ const addToBag=()=>{
 }
 
   return (
-    <div className="main-box" >
+    <div className={styles.main_box} >
     {/* product description on products page- */}
+
+    
+
     
     <Link to={`/products/${data.id}`}> 
     
-     <div className="div-img" >
-       <img src={data.image}  />
+     <div className={styles.div_img} >
+       <img src={data.image} alt="ima" />
+
      </div>
 
      <div>
@@ -30,7 +34,7 @@ const addToBag=()=>{
     <p>{data.category}</p>
     
  
-    <p className='product-price'>RS. {data.price} /Piece </p>
+    <p className={styles.product_price}>RS. {data.price} /Piece </p>
   
    </div>
     </Link>
