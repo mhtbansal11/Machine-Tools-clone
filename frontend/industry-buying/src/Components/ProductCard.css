@@ -10,7 +10,6 @@
     align-items: center;
     display:flex;
     padding-top:20px;
-   
 }
 img{
     transition: transform .2s;

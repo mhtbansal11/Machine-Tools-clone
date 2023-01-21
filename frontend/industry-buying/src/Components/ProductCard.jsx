@@ -8,7 +8,7 @@ const ProductCard = ({data}) => {
     <div className="main-box" >
     {/* product description on products page- */}
     <div className="div-img" >
-       <img src={data.image}  />
+       <img src={data.image}  alt="data"/>
      </div>
      <p> {data.title}</p>
     <h3>by <b>{data.brand}</b></h3>
