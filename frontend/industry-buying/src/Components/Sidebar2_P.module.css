@@ -67,4 +67,32 @@ h3{
 }
 .brandSearch>div>p{
     margin-left: 2%;
+    color: #636677;
 }
+.brandSearch>div>input{
+   width: 14px;
+}
+
+.dashline{
+    border-bottom: 1px dashed rgb(204, 204, 204);
+    text-align: left;
+    margin-left: 20px;
+    margin-top: 4%;
+    padding-bottom:3%;
+    width:87%;
+}
+.Discount{
+    width: 87%;
+    margin-top:6%;
+    margin-left:18px;
+}
+.Discount>div{
+    display: flex;
+}
+.Discount>div>p{
+    margin-left: 2%;
+    color: #636677;
+}
+.Discount>div>input{
+    width:14px;
+ }

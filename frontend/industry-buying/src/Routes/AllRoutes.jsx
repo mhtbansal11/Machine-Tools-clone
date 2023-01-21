@@ -7,6 +7,7 @@ import  HomePage  from "../Pages/HomePage";
 import LoginPage from "../Pages/LoginPage";
 import Payment from "../Pages/Payment"
 import  ProductPage  from "../Pages/ProductPage";
+import Signup from "../Pages/SignUp";
 import SingleProductPage from "../Pages/SingleProductPage";
 
 
@@ -20,6 +21,8 @@ export function AllRoutes() {
         <Route path="/cart" element={<Cart /> }/>    
         <Route path="/payment" element={<Payment />} />
         <Route path="/login" element={<LoginPage />} />
+        <Route path="/signup" element={<Signup />} />
+
 
       </Routes>
   
