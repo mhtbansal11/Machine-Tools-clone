@@ -1,13 +1,13 @@
 import React, {useEffect, useState}from 'react';
-import {useSearchParams} from 'react';
+import {useSearchParams} from 'react-router-dom';
 import styles from "./Sidebar2_P.module.css";
 
 
 const Sidebar2_P = () => {
   const Searchurl = "https://static3.industrybuying.com/static/svg/search-icon.svg?de0f06193896";
   const [searchParams, setSearchParams] = useSearchParams();
-  // const initialState = searchParams.getAll("category");
-  const [category, setCategory] = useState([]);
+  const initialState = searchParams.getAll("category");
+  const [category, setCategory] = useState(initialState || []);
 
   // console.log(category);
   console.log(searchParams.getAll("category"));
