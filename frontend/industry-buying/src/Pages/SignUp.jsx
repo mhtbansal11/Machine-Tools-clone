@@ -42,6 +42,7 @@ export default function Signup() {
     }else
     setErrorMsg("")
     setSubmitButtonDisabled(true)
+    
     createUserWithEmailAndPassword(auth,values.email,values.pass).then(async(res)=>{
       setSubmitButtonDisabled(false)
       const user=res.user;
@@ -53,6 +54,7 @@ export default function Signup() {
     .catch((err)=>{
     setSubmitButtonDisabled(false);
     setErrorMsg(err.message)
+    //done
   })
   };
   const [showPassword, setShowPassword] = useState(false);
