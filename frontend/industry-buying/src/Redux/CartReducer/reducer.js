@@ -1,37 +1,65 @@
-import { GET_PRODUCT_ERROR, GET_PRODUCT_REQUEST, GET_PRODUCT_SUCCESS, UPDATE_PRODUCT_SUCCESS } from "./actionType";
-
-const initialState = {
-    cartItem:[],
-    isLoading:false,
-    isError:false
-}
-
-export const reducer = (state=initialState,action) =>{
-    const {type,payload} = action;
-    switch(type){
-        case GET_PRODUCT_REQUEST:
-            return {...state,isLoading:true}
-
-        case GET_PRODUCT_SUCCESS:
-            return {...state,isLoading:false,cartItem:payload}
-
-        case GET_PRODUCT_ERROR:
-            return {...state,isLoading:false,isError:true}
-
-        case UPDATE_PRODUCT_SUCCESS:
-            {
-                const updateCartQuantity = state.cartItem.map((cart) =>
-                {
-                    if(cart.id === payload.id)
-                    {
-                        cart.quantity = payload.quantity
-                    }
-                    return cart
-                })
-                return {...state,cartItem:updateCartQuantity}
-            }
-            
-        default:
-            return state;
+import {
+    CART_LOADING,
+    CART_ERROR,
+    ADD_TO_CART,
+    REMOVE_FROM_CART,
+    GET_CART,
+    UPDATE_CART
+  } from "./actionType";
+  
+  const initialState = {
+    loading: "false",
+    error: "false",
+    cart: [],
+  };
+  
+  export const reducer = (state = initialState, { type, payload }) => {
+    switch (type) {
+      case CART_LOADING: {
+        return {
+          ...state,
+          loading: true,
+        };
+      }
+  
+      case CART_ERROR: {
+        return {
+          ...state,
+          loading: false,
+          error: true,
+        };
+      }
+      case ADD_TO_CART: {
+        return {
+          ...state,
+          loading: false,
+          cart: [...state.cart, payload],
+        };
+      }
+      case REMOVE_FROM_CART: {
+        const updatedCart = state.cart.filter((el) => el.id !== payload);
+        return {
+          ...state,
+          loading: false,
+          cart: updatedCart,
+        };
+      }
+      case GET_CART: {
+        return {
+          ...state,
+          cart: payload,
+        };
+      }
+      case UPDATE_CART:{
+        let data=state.map((el)=>(el.id===payload.id?{...payload.ele}:el))
+        return{
+            ...state,
+            cart:data
+        }
+      }
+      default: {
+        return state;
+      }
     }
-}
+  };
+  

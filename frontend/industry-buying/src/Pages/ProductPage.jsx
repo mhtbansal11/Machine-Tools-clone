@@ -40,7 +40,7 @@ Grain Processing Machine
                  { isLoading ? <Skeleton height={"150vh"} width={"80vw"}/>:  payload &&
                          payload.map(singlePro=>{
                          return (<Box w='100%' key={singlePro.id}  borderColor={"black"}>
-                         <Link to={`/products/${singlePro.id}`}> <ProductCard  data={singlePro} /> </Link>  
+                     <ProductCard  data={singlePro} /> 
                          </Box>)
                          }) }
             </SimpleGrid>

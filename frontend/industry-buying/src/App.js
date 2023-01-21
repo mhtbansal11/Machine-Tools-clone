@@ -1,10 +1,8 @@
 import { useEffect, useState } from 'react';
 import './App.css';
-import { auth } from './Pages/firebase';
-import LoginPage from './Pages/LoginPage';
-// import SidebarContent from './Components/Sidebar1_H';
-// import Sidebar1_H from './Components/Sidebar1_H';
 
+// import Sidebar1_H from './Components/Sidebar1_H';
+// import Sidebar2_P from './Components/Sidebar2_P';
 
 
 import { AllRoutes } from './Routes/AllRoutes';
@@ -30,9 +28,7 @@ function App() {
    
 
    <AllRoutes/>
-   <LoginPage/>
 
-    {/* <SidebarContent /> */}
     
     </div>
   );
