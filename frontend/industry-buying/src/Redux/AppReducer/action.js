@@ -32,3 +32,5 @@ export const addProductData = (payload)=> (dispatch)=>
         })
         .catch(err=>dispatch({type: types.ADD_PRODUCT_ERROR}))
 }
+
+// ------------Sidebar saction-------------
