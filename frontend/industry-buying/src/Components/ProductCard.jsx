@@ -1,5 +1,7 @@
 import React from 'react'
+
 import {Button, useDisclosure} from "@chakra-ui/react"
+
 import styles from "./ProductCard.module.css"
 
 import { Link } from 'react-router-dom'
@@ -35,7 +37,11 @@ const addToBag=()=>{
     <Link to={`/products/${data.id}`}> 
     
      <div className={styles.div_img} >
+
        <img className={styles.img_in_div} src={data.image} alt="img" />
+
+       <img src={data.image} alt="ima" />
+
 
      </div>
 
