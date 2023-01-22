@@ -13,7 +13,6 @@ function App() {
 
    <AllRoutes/>
    {/* <Sidebar2_P/> */}
-    
     </div>
   );
 }
