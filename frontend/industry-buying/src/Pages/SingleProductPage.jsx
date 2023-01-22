@@ -16,7 +16,7 @@ const SingleProductPage = () => {
 
    const addToBag=()=>{
     
-      console.log("dbvg");
+    
    
     dispatch(addProductData(currrentPro))
      }
