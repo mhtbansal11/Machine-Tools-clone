@@ -3,11 +3,11 @@ import axios from "axios"
 
 
 // get function -
-export const getProductData = ()=> (dispatch)=>
+export const getProductData = (param) => (dispatch)=> //param
 {
     dispatch({type: types.GET_PRODUCT_REQUEST})
     return axios
-        .get(`https://zany-cyan-angelfish-tutu.cyclic.app/grain_Processing_Machine`)
+        .get(`https://zany-cyan-angelfish-tutu.cyclic.app/grain_Processing_Machine`,param) //param
         .then(res=>{
             dispatch({type: types.GET_PRODUCT_SUCCESS, payload: res.data})
            
@@ -32,3 +32,5 @@ export const addProductData = (payload)=> (dispatch)=>
         })
         .catch(err=>dispatch({type: types.ADD_PRODUCT_ERROR}))
 }
+
+// ------------Sidebar saction-------------

@@ -1,22 +1,136 @@
-.productCard{
+.productCardCart{
     display: flex;
-    border: 2px solid green;
+    border-bottom: 1px solid rgb(179, 179, 179);
     padding: 0;
     justify-content: space-around;
 }
 
+/* -------------------Product Description Div Styling------------------- */
 
 .productDetails{
-    border: 2px solid blue;
+    /* border: 2px solid blue; */
     width:40%
 }
 
-.quantityDetails{
-    border:2px solid yellow;
+.titleDesc{
+    text-align: left;
+}
+
+.productImg{
+
+    width: 100%;
+    /* border: 1px solid black; */
+}
+
+.imgTextWrapper{
+    display: flex;
+    margin-top: 24px;
+    margin-bottom: 8px;
+}
+
+.productImgDiv{
+    width: 30%;
+}
+
+.textDescDiv{
+    text-align: left;
+    font-size: 14px;
+    padding-left: 8px;
+}
+
+.textDescDiv>div{
+    display: flex;
+}
+
+.textDescDiv>div>p:nth-child(1){
+    color: #444;
+}
+
+
+.removeIconText{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    color: #DE2511;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+/* ---------------------------Quantity Div Styling-------------------- */
+
+.quantityDetailsWrapper{
+    /* border:2px solid yellow; */
     width: 25%;
 }
 
+
+.quantityDiv{
+    width: 36%;
+    display: flex;
+    /* justify-content: space-around; */
+    margin: auto;
+    margin-top: 20px;
+    box-sizing: border-box;
+}
+
+.quantityDiv:hover .quantityDisplay{
+    border: 1px solid #3d86d4;
+}
+
+.decrementDisplay{
+    font-size: 20px;
+    color: #666;
+    border:1px solid #e4e4e4;
+    font-weight: lighter;
+    padding-left: 6px;
+    padding-right: 6px;
+    cursor: pointer;
+}
+
+.incrementDisplay{
+    font-size: 20px;
+    color: #666;
+    border:1px solid #e4e4e4;
+    font-weight: lighter;
+    padding-left: 6px;
+    padding-right: 6px;
+    cursor: pointer;
+}
+
+.quantityDisplay{
+    font-size: 16px;
+    color: #444;
+    border:1px solid #e4e4e4;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.decrementDisplay:hover{
+    box-sizing: border-box;
+    border: 1px solid red;
+}
+
+.quantityDisplay:hover{
+    box-sizing: border-box;
+    border: 1px solid #3d86d4;
+}
+
+.incrementDisplay:hover{
+    box-sizing: border-box;
+    border: 1px solid #4c993e;
+}
+
+/* ----------------------------------------------------------- */
+
 .priceDetails{
-    border: 2px solid violet;
+    /* border: 2px solid violet; */
     width:35%;
+}
+
+.shipIconText{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    color: #4c993e;
+    font-size: 14px;
 }
