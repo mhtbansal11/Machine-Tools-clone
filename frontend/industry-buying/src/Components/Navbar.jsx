@@ -1,12 +1,27 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import logo from "../logo.png";
 import styles from "./Navbar.module.css";
 import { Button } from "@chakra-ui/react";
 import { BsFillCartCheckFill } from "react-icons/bs";
 import { Link } from "react-router-dom";
-
+import { auth } from "../Pages/firebase";
+import Signout from "../Pages/Signout";
+// import { auth } from './firebase';
 
 export const Navbar = () => {
+  const [userName,setUserName]=useState("");
+ 
+
+    useEffect(()=>{
+        auth.onAuthStateChanged(async(user)=>{
+          if(user){
+           await setUserName(user.displayName)
+            console.log(userName)
+          }else setUserName("")
+        
+        })
+        
+      },[])
   const Searchurl =
     "https://static3.industrybuying.com/static/svg/search-icon.svg?de0f06193896";
   return (
@@ -46,16 +61,20 @@ export const Navbar = () => {
         <div className={styles.login}>
           <Link to={`/login`}>
             <Button mr={4} color="white" bg={"#e45301"} _hover={{backgroundColor:"transparent"}} variant={"outline"}>
-              Login
+              
+              {userName?userName:"Login"}
             </Button>
           </Link>
+          {/* {userName?<Signout/>: */}
           <Link to={`/signup`}>
             <Button  color="white" bg={"#e45301"} _hover={{backgroundColor:"transparent"}} variant={"outline"}>
-              SignUp
+                {/* Signup */}
+              {userName?"Sign Out":"Sign Up"}
             </Button>
           </Link>
+        {/* //    }  */}
         </div>
       </div>
-    </div>
-  );
+    </div>
+  );
 };

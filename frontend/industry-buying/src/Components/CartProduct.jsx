@@ -4,7 +4,7 @@ import styles from "./CartProduct.module.css"
 import {RiDeleteBinLine} from "react-icons/ri"
 import {FaShippingFast} from "react-icons/fa"
 import { useDispatch, useSelector } from 'react-redux'
-import { getCartData, getCartItem, updateCart, updateCartDataSuccess } from '../Redux/CartReducer/action'
+import { getCartData, getCartItem, removeToCart, updateCart, updateCartDataSuccess } from '../Redux/CartReducer/action'
 import {BiMinus,BiPlus} from "react-icons/bi"
 
 
@@ -35,7 +35,7 @@ const handleIncrease = (quant) =>{
 
   dispatch(updateCart(id,dataSent))
   window.location.reload(true);
-  //.then(()=>dispatch(getCartData()));
+  // .then(()=>dispatch(getCartItem()));
   // {"quantity":quant+1}
 }
 
@@ -54,8 +54,12 @@ const handleDecrease = (quant) =>{
 
  dispatch(updateCart(id,dataSent))
  window.location.reload(true);
- //.then(()=>dispatch(getCartData()));
- // {"quantity":quant+1}
+//  .then(()=>dispatch(getCartItem()));
+//  {"quantity":quant+1}
+}
+
+const handleDelete=(id)=>{
+  dispatch(removeToCart(id))
 }
 
   return (
@@ -73,7 +77,7 @@ const handleDecrease = (quant) =>{
             <div className={styles.textDescDiv}>
               <div><p>Brand:</p><span>{brand}</span></div>
               <div><p>Category:</p><span>{category}</span></div>
-              <div className={styles.removeIconText}><RiDeleteBinLine/><p>Remove</p></div>
+              <div onClick={()=>handleDelete(id)} className={styles.removeIconText}><RiDeleteBinLine/><p>Remove</p></div>
             </div>
           </div>
           
@@ -87,7 +91,7 @@ const handleDecrease = (quant) =>{
     <div className={styles.quantityDetailsWrapper}>
       <div className={styles.quantityDiv}>
           <div className={styles.decrementDisplay}>
-          <button disabled={quantity==1} onClick={()=>handleDecrease(quantity)} ><BiMinus/></button>
+          <button disabled={quantity<=1} onClick={()=>handleDecrease(quantity)} ><BiMinus/></button>
           </div>
           <div className={styles.quantityDisplay}>
           <span>{quantity}</span>
