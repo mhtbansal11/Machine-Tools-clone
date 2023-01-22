@@ -3,19 +3,28 @@ import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux"
 import { getProductData } from "../Redux/AppReducer/action";
 import {SimpleGrid,Box, Heading, Skeleton, Stack} from "@chakra-ui/react"
-import { Link } from "react-router-dom";
+import { Link, useLocation, useSearchParams } from "react-router-dom";
 import ProductCard from "../Components/ProductCard";
 
 const ProductPage = () => {
   const productData = useSelector(store=>store.appReducer)
   // console.log(store)
+  const location = useLocation();
+  const [searchParams] = useSearchParams();
+  // console.log(location);
   const {payload, isLoading, isError} = productData
   const dispatch = useDispatch();
    
   useEffect(()=>{
-        dispatch(getProductData())
+    let paramObj = {
+      params: {
+        category: searchParams.getAll('brand')
+      }
+    }
+
+        dispatch(getProductData(paramObj))
        
-    },[])
+    },[location.search]) //
 
   return (
     // parent div
