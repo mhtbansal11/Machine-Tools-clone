@@ -46,10 +46,11 @@ export default function Signup() {
     createUserWithEmailAndPassword(auth,values.email,values.pass).then(async(res)=>{
       setSubmitButtonDisabled(false)
       const user=res.user;
+      console.log(values)
      await updateProfile(user,{
-        displayName:values.name,
+        displayName:values.first_name,
       })
-      navigate("/")
+      navigate("/login")
     })
     .catch((err)=>{
     setSubmitButtonDisabled(false);

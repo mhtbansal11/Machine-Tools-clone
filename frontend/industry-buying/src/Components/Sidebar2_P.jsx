@@ -6,11 +6,11 @@ import styles from "./Sidebar2_P.module.css";
 const Sidebar2_P = () => {
   const Searchurl = "https://static3.industrybuying.com/static/svg/search-icon.svg?de0f06193896";
   const [searchParams, setSearchParams] = useSearchParams();
-  const initialState = searchParams.getAll("category");
+  const initialState = searchParams.getAll("brand");
   const [category, setCategory] = useState(initialState || []);
 
   // console.log(category);
-  console.log(searchParams.getAll("category"));
+  // console.log(searchParams.getAll("category"));
 
   const handleFilter = (e) =>{
   let newCategory = [...category]
