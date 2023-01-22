@@ -34,7 +34,6 @@ function App() {
     {/* <ProductPage /> */}
    <AllRoutes/>
 
-    
     </div>
   );
 }

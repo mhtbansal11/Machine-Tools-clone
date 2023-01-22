@@ -23,20 +23,22 @@ const data = useSelector((store)=>store.cartReducer.cart)
 
   return (
     <div className={styles.cartPage}>
-    {/* ********************NAVBAR************************ */}
+    {/* -----------------------NAVBAR---------------------- */}
     <NavbarCart/>
     <div className={styles.pageWrapper}>
 
 
-{/* ************************LEFT SIDE SECTION******************* */}
+{/* -----------------------LEFT SIDE SECTION---------------------- */}
         <div className={styles.pageLeftside}>
           <div className={styles.cartTotalQuantity}>
-            <p>My Cart:({data.length}items)</p>
-              <div className={styles.orderHeading}> 
+            <div className={styles.myCartWrapper}>
+            <p className={styles.myCartText}>My Cart</p><span>({data.length} Items)</span>
+            </div>
+            <div className={styles.orderHeading}> 
                 <p className={styles.itemHeading}>Item</p>
                 <p className={styles.quantityHeading}>Quantity</p>
                 <p className={styles.priceHeading}>Price(Inclusive of GST)</p>
-              </div>
+            </div>
           </div>
           <div className={styles.productCardWrapper}>
             {
@@ -46,7 +48,7 @@ const data = useSelector((store)=>store.cartReducer.cart)
         </div>
 
 
-{/* **************************RIGHT SIDE************************ */}
+{/* ----------------------RIGHT SIDE--------------------- */}
         <div className={styles.pageRightside}>
 
 
@@ -56,16 +58,22 @@ const data = useSelector((store)=>store.cartReducer.cart)
               <div>Payment Summary</div>
               <div><HiOutlineCurrencyRupee/></div>
             </div>
-            <p>Estimate shipping charges</p>
+            <p className={styles.shippingChargesText}>Estimate shipping charges</p>
             <Stack spacing={4}>
                 <InputGroup  w={"90%"} m="auto">
-                  <Input variant='outline' borderColor='gray' placeholder='Enter amount' />
-                  <InputRightElement children={<FaPencilAlt color='green.500' />} />
+                  <Input variant='outline' borderColor='gray' placeholder='ENTER YOUR PINCODE'  _placeholder={{ color: 'grey', fontSize:'14px' }} />
+                  <InputRightElement children={<FaPencilAlt/>} color="grey" />
                 </InputGroup>
             </Stack>
-            <p>subtotal:</p>
-            <p>shipping charges</p>
-            <p>Total Price:</p>
+            <div className={styles.shippingPriceInfo}>
+              <p>subtotal:</p>
+              <div>
+              <p>shipping charges</p><p>FREE</p>
+              </div>
+              
+              <p>Total Price:</p>
+            </div>
+       
             <div className={styles.shippingText}><FaShippingFast/><p>  Shipping charges applicable as per your pincode</p></div>
           </div>
         
