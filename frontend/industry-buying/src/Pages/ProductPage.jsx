@@ -17,8 +17,8 @@ const ProductPage = () => {
   console.log(location);
 
   // console.log(store)
-  const location = useLocation();
- const [searchParams] = useSearchParams();
+  // const location = useLocation();
+//  const [searchParams] = useSearchParams();
   // console.log(location);
 
   const {payload, isLoading, isError} = productData
