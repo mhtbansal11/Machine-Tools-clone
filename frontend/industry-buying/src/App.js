@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import './App.css';
+import { auth } from './Pages/firebase';
 
 // import ProductPage from './Pages/ProductPage';
 // import SidebarContent from './Components/Sidebar1_H';
