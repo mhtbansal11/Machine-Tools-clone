@@ -6,7 +6,6 @@ import {
   Flex,
   Icon,
   useColorModeValue,
-  Link,
   Drawer,
   DrawerContent,
   useDisclosure,
@@ -37,7 +36,7 @@ import {
 import {
   BiBed,
 } from 'react-icons/bi'
-
+import {Link} from "react-router-dom"
   
 const LinkItems = [
   { name: 'Agriculture Garden & Landscaping', icon: CiForkAndKnife},
@@ -99,9 +98,9 @@ const SidebarContent = ({ onClose, ...rest }) => {
       {LinkItems.map((link) => (
         
           <NavItem key={link.name} icon={link.icon}>
-            <Link to={`/products`} >
+            <Link to={`/products`}>
               {link.name}
-            </Link>
+              </Link>
           </NavItem>
         
         
