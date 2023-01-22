@@ -3,11 +3,11 @@ import axios from "axios"
 
 
 // get function -
-export const getProductData = (param) => (dispatch)=>
+export const getProductData = () => (dispatch)=> //param
 {
     dispatch({type: types.GET_PRODUCT_REQUEST})
     return axios
-        .get(`https://zany-cyan-angelfish-tutu.cyclic.app/grain_Processing_Machine`,param)
+        .get(`https://zany-cyan-angelfish-tutu.cyclic.app/grain_Processing_Machine`) //param
         .then(res=>{
             dispatch({type: types.GET_PRODUCT_SUCCESS, payload: res.data})
            
