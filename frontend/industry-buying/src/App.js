@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import './App.css';
-import Footer from './Components/Footer';
+// import Footer from './Components/Footer';
+// import { Navbar } from './Components/Navbar';
 import { auth } from './Pages/firebase';
 
 // import ProductPage from './Pages/ProductPage';
@@ -33,9 +34,9 @@ function App() {
     <div className="App">
    
     {/* <ProductPage /> */}
-    
+    {/* <Navbar /> */}
    <AllRoutes/>
-   <Footer/>
+   
     
     </div>
   );

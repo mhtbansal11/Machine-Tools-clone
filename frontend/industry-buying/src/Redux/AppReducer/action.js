@@ -37,3 +37,11 @@ export const addProductData = (payload)=> (dispatch)=>
 }
 
 // ------------Sidebar saction-------------
+
+let obj = {
+    params: {
+        brand: ["Raja", "Kisankraft"],
+        _sort: "price",
+        _order: "asc",
+    }
+}

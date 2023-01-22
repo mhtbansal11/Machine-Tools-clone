@@ -1,10 +1,10 @@
 .navbar{
     width:100%;
     background-color: #232F3E;
-    height:64px;
+    height:74px;
     box-sizing: border-box;
     position: fixed;
-    top: 16px;
+    top: 0px;
     z-index:111;
     color: white;
     /* border:2px solid green; */
