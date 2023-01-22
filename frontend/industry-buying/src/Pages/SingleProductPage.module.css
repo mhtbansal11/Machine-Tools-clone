@@ -1,0 +1,26 @@
+.parent_single{
+    width: 70%;
+    padding: 2%;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+
+.single_div_img{
+    /* border: 0.5px solid black; */
+    width: 400px;
+    height: 400px;
+   margin-top: 20px;
+    box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.25em, rgba(90, 125, 188, 0.05) 0px 0.25em 1em;
+}
+
+.single_div_img:hover{
+    transform:scale(1.1);
+   
+}
+
+.buy_now{
+
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+
+}
+
+
