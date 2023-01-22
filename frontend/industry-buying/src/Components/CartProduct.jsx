@@ -39,6 +39,24 @@ const handleIncrease = (quant) =>{
   // {"quantity":quant+1}
 }
 
+const handleDecrease = (quant) =>{
+  quantity=quant-1;
+ let dataSent={
+   id,
+   title,
+   price,
+   brand,
+   image,
+   category,
+   quantity,
+   discount
+ }
+
+ dispatch(updateCart(id,dataSent))
+ window.location.reload(true);
+ //.then(()=>dispatch(getCartData()));
+ // {"quantity":quant+1}
+}
 
   return (
     <>
@@ -69,7 +87,7 @@ const handleIncrease = (quant) =>{
     <div className={styles.quantityDetailsWrapper}>
       <div className={styles.quantityDiv}>
           <div className={styles.decrementDisplay}>
-          <button disabled={count==1} onClick={()=>setCount(count-1)} ><BiMinus/></button>
+          <button disabled={quantity==1} onClick={()=>handleDecrease(quantity)} ><BiMinus/></button>
           </div>
           <div className={styles.quantityDisplay}>
           <span>{quantity}</span>

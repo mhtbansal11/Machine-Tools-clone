@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import styles from "./Cart.module.css"
 import {HiOutlineCurrencyRupee} from "react-icons/hi"
 import {TbDiscount2} from "react-icons/tb"
@@ -7,19 +7,47 @@ import { NavbarCart } from '../Components/NavbarCart'
 import { useDispatch, useSelector } from 'react-redux'
 import { getCartData, getCartItem } from '../Redux/CartReducer/action'
 import { CartProduct } from '../Components/CartProduct'
-import { Input, InputGroup, InputLeftElement, InputRightElement, Stack } from '@chakra-ui/react'
+import { Box, Button, Image, Input, InputGroup, InputLeftElement, InputRightElement, Stack, Text, useDisclosure } from '@chakra-ui/react'
 import {FaPencilAlt} from "react-icons/fa"
 import {FaShippingFast} from "react-icons/fa"
-
+import {
+  Modal,
+  ModalOverlay,
+  ModalContent,
+  ModalHeader,
+  ModalFooter,
+  ModalBody,
+  ModalCloseButton,
+} from '@chakra-ui/react'
 
 export const Cart = () => {
 
 const dispatch = useDispatch();
 
+
+const { isOpen, onOpen, onClose } = useDisclosure()
+
+const data = useSelector((store)=>store.cartReducer.cart)
+
+let ans = data.map((el)=>(el.price*el.quantity))
+console.log(ans)
+
+let initialValue = 0;
+let sumWithInitial = ans.reduce(
+  (accumulator, currentValue) => accumulator + currentValue,
+  initialValue
+)
+console.log(sumWithInitial)
+
+const handleCoupon = () => 
+{
+  sumWithInitial = sumWithInitial-300;
+}
+
+
 useEffect(()=>{
   dispatch(getCartItem())
-},[dispatch])
-const data = useSelector((store)=>store.cartReducer.cart)
+},[dispatch,sumWithInitial])
 
   return (
     <div className={styles.cartPage}>
@@ -66,14 +94,21 @@ const data = useSelector((store)=>store.cartReducer.cart)
                 </InputGroup>
             </Stack>
             <div className={styles.shippingPriceInfo}>
-              <p>subtotal:</p>
               <div>
-              <p>shipping charges</p><p>FREE</p>
+                <p>Subtotal</p>
+                <p>Rs. {sumWithInitial}</p>
               </div>
               
-              <p>Total Price:</p>
+              <div className={styles.shippingChargesIconText}>
+                <p>Shipping charges</p>
+                <p>FREE</p>
+              </div>
+            
             </div>
-       
+            <div className={styles.totalPriceWrapper}>
+                <p>Total Price</p>
+                <p>Rs. {sumWithInitial}</p>
+            </div>
             <div className={styles.shippingText}><FaShippingFast/><p>  Shipping charges applicable as per your pincode</p></div>
           </div>
         
@@ -97,8 +132,48 @@ const data = useSelector((store)=>store.cartReducer.cart)
           <Input placeholder='Enter Coupon Code' focusBorderColor='black'/>
           <InputRightElement children={'Apply'} color="orange" bg="none" mr="4"/>
         </InputGroup> */}
+        <Stack spacing={4} mt="8px">
+                <InputGroup  w={"90%"} m="auto">
+                  <Input variant='outline' borderColor='black' placeholder='ENTER COUPON CODE'  focusBorderColor='crimson' _placeholder={{ color: 'grey', fontSize:'14px' }} />
+                  <InputRightElement children={'Apply'} color="#E45301" mr="4"/>
+                </InputGroup>
+          </Stack>
+          {/* <Box display={"flex"} w={"90%"} margin="auto" mt="8px" alignItems={"center"} justifyContent="space-between">
+                  <Box>GREENSOUL300</Box>
+                  <Button onClick={handleCoupon}>Apply</Button>
+          </Box> */}
 
-<input type="text" placeholder='Enter Coupon Code' style={{backgroundColor:"white", border:"1px solid black"}}/>
+          <Box w="90%" m="auto" mt="16px" _hover={{background:"orange"}} cursor="pointer">
+            <Text bg={"#FB8339"} color="white" fontWeight={"bold"} p="14px">PLACE ORDER</Text>
+          </Box>
+
+<Box>
+
+      <Button onClick={onOpen}>Open Modal</Button>
+
+      <Modal blockScrollOnMount={false} isOpen={isOpen} onClose={onClose} bg="white">
+        <ModalOverlay />
+        <ModalContent bg="white" color={"black"}>
+          <ModalHeader>Modal Title</ModalHeader>
+          <ModalCloseButton />
+          <ModalBody>
+            <Text fontWeight='bold' mb='1rem'>
+              You can scroll the content behind the modal
+              <Image _hover={{scale:1}} w="50%" src={"https://i.gifer.com/origin/11/1184b4c0aa977f925dde58d2075772dd_w200.gif"} />
+            </Text>
+            
+          </ModalBody>
+
+          <ModalFooter>
+            <Button colorScheme='blue' mr={3} onClick={onClose}>
+              Close
+            </Button>
+            <Button variant='outline' color={"black"} >Continue Shopping</Button>
+          </ModalFooter>
+        </ModalContent>
+      </Modal>
+    
+</Box>
 
        </div>
         
