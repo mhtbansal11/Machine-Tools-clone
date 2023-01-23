@@ -33,31 +33,31 @@
     <li>
      <div>
          <h4>Login </h4>
-         <img src="https://drive.google.com/file/d/1W6R2-XFatHPAdWa4KXnHdPrQlveMtBIl/view?usp=sharing" alt="login"/>
+         <img src="https://i.postimg.cc/j5FdXnGv/Screenshot-20230123-115651.png" alt="login"/>
      </div>
     </li> 
     <li>
      <div>
          <h4>Signup</h4>
-         <img src="https://drive.google.com/file/d/1wpSxBYesCbxNHxDQEnE8NSHrTEhetDsU/view?usp=sharing" alt="signup"/>
+         <img src="https://i.postimg.cc/3RdDYhhS/Screenshot-20230123-115630.png" alt="signup"/>
      </div>
     </li> 
     <li>
      <div>
          <h4>Product Page</h4>
-         <img src="https://drive.google.com/file/d/1-ZVLFglQDjnKjKFQUcQZBQXd1dAv9roV/view?usp=sharing" alt="product page"/>
+         <img src="https://i.postimg.cc/cLxCdWMR/Screenshot-20230123-115615.png" alt="product page"/>
      </div>
     </li> 
     <li>
      <div>
          <h4>Cart Page</h4>
-         <img src="https://drive.google.com/file/d/1hMh9AfdC65w4eKbdvEfw8q0BUrMD3AvQ/view?usp=sharing" alt="cart"/>
+         <img src="https://i.postimg.cc/KjbFQ70P/Screenshot-20230123-115801.png" alt="cart"/>
      </div>
     </li> 
     <li>
      <div>
          <h4>Checkout Page</h4>
-         <img src="https://drive.google.com/file/d/1DcIyKApUZgm6KsnPYuKCxqskIzBY5uxq/view?usp=sharing" alt="checkout"/>
+         <img src="https://i.postimg.cc/j5HYWwRL/Screenshot-20230123-115819.png" alt="checkout"/>
      </div>
     </li> 
 
