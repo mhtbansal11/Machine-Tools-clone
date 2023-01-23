@@ -10,7 +10,7 @@
 # Technology
 
 
-- **Client:** HTML, CSS, JS, React, Redux, ChakraUI
+- **Client:** HTML, CSS, JS, React, Redux, ChakraUI, Firebase
 
 - **Server:** Netlify and Cyclic
 
