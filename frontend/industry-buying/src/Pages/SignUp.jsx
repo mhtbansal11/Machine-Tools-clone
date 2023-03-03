@@ -12,14 +12,14 @@ import {
   Heading,
   Text,
   useColorModeValue,
-  Link,
 } from '@chakra-ui/react';
 import { useState } from 'react';
 import { ViewIcon, ViewOffIcon } from '@chakra-ui/icons';
 import { createUserWithEmailAndPassword,updateProfile } from 'firebase/auth';
 import { auth } from './firebase';
 import { async } from '@firebase/util';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate,Link } from 'react-router-dom';
+
 
 export default function Signup() {
   const navigate=useNavigate()
@@ -133,7 +133,7 @@ export default function Signup() {
             </Stack>
             <Stack pt={6}>
               <Text align={'center'}>
-                Already a user? <Link color={'blue.400'}>Login</Link>
+                Already a user? <Link to={`/login`} color={'blue.400'}>Login</Link>
                 <p>{errorMess}</p>
               </Text>
             </Stack>

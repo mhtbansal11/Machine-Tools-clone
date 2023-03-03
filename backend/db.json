@@ -1,0 +1,506 @@
+{
+  "grain_Processing_Machine": [
+    {
+      "id": 1,
+      "title": "AgriPro 3 HP Butterfly Rice Mill Machine without Motor APRM6NbyAgriPro Agripro 3 Hp Butterfly Rice Mill Machine Without Motor",
+      "price": 11800,
+      "brand": "AgriPro",
+      "image": "https://static1.industrybuying.com/products/agriculture-garden-landscaping/grain-processing-machine/AGR.GRA.52125501_1668012170622.webp",
+      "category": "Grain Processing Machine",
+      "quantity": 1,
+      "discount": 20
+    },
+    {
+      "id": 2,
+      "title": "AgriPro 3 HP Disc Mill Crusher with Milling Screen Without Motor APDMC9FC",
+      "price": 9990,
+      "brand": "AgriPro",
+      "image": "https://static1.industrybuying.com/products/agriculture-garden-landscaping/grain-processing-machine/AGR.GRA.62125493_1668012165829.webp",
+      "category": "Grain Processing Machine",
+      "quantity": 1,
+      "discount": 20
+    },
+    {
+      "id": 3,
+      "title": "AgriPro 3 HP Butterfly Combined Rice Mill Machine without Motor",
+      "price": 25800,
+      "brand": "AgriPro",
+      "image": "https://static1.industrybuying.com/products/agriculture-garden-landscaping/grain-processing-machine/AGR.GRA.82125517_1670416542273.webp",
+      "category": "Grain Processing Machine",
+      "quantity": 1,
+      "discount": 20
+    },
+    {
+      "id": 4,
+      "title": "AgriPro 1 HP Maize Thresher Machine Without Motor",
+      "price": 8980,
+      "brand": "AgriPro",
+      "image": "https://static1.industrybuying.com/products/agriculture-garden-landscaping/grain-processing-machine/AGR.GRA.32125484_1668012163371.webp",
+      "category": "Grain Processing Machine",
+      "quantity": 1,
+      "discount": 20
+    },
+    {
+      "id": 5,
+      "title": "AgriPro 3 HP Motor for Butterfly Rice Mill APRM6N",
+      "price": 8690,
+      "brand": "AgriPro",
+      "image": "https://static1.industrybuying.com/products/agriculture-garden-landscaping/grain-processing-machine/AGR.GRA.42649918_1668027793077.webp",
+      "category": "Grain Processing Machine",
+      "quantity": 1,
+      "discount": 20
+    },
+    {
+      "id": 6,
+      "title": "AgriPro CO. Screen for Butterfly Combined Rice Mill APCRM6N9FC",
+      "price": 518,
+      "brand": "AgriPro",
+      "image": "https://static1.industrybuying.com/products/agriculture-garden-landscaping/grain-processing-machine/AGR.GRA.35747465_1668203509193.webp",
+      "category": "Grain Processing Machine",
+      "quantity": 1,
+      "discount": 20
+    },
+    {
+      "id": 7,
+      "title": "AgriPro CO. Screen Ring Set for Butterfly Combined Rice Mill",
+      "price": 848,
+      "brand": "AgriPro",
+      "image": "https://static1.industrybuying.com/products/agriculture-garden-landscaping/grain-processing-machine/AGR.GRA.75747477_1669360316307.webp",
+      "category": "Grain Processing Machine",
+      "quantity": 1,
+      "discount": 20
+    },
+    {
+      "id": 8,
+      "title": "AgriPro 3 HP Motor for Disc Mill Crusher APDMC9FC",
+      "price": 8580,
+      "brand": "AgriPro",
+      "image": "https://static1.industrybuying.com/products/agriculture-garden-landscaping/grain-processing-machine/AGR.GRA.22649928_1668027796713.webp",
+      "category": "Grain Processing Machine",
+      "quantity": 1,
+      "discount": 20
+    },
+    {
+      "id": 9,
+      "title": "AgriPro 3 HP Motor for Butterfly Combined Rice Mill APCRM6N9FC",
+      "price": 9990,
+      "brand": "AgriPro",
+      "image": "https://static1.industrybuying.com/products/agriculture-garden-landscaping/grain-processing-machine/AGR.GRA.202323516_1668016153708.webp",
+      "category": "Grain Processing Machine",
+      "quantity": 1,
+      "discount": 20
+    },
+    {
+      "id": 10,
+      "title": "AgriPro 3 HP Butterfly Combined Rice Mill Machine with Motor",
+      "price": 29990,
+      "brand": "AgriPro",
+      "image": "https://static1.industrybuying.com/products/agriculture-garden-landscaping/grain-processing-machine/AGR.GRA.85998711_1668749990602.webp",
+      "category": "Grain Processing Machine",
+      "quantity": 1,
+      "discount": 10
+    },
+    {
+      "id": 11,
+      "title": "AgriPro 3 HP Motor for 4in1 Combined Rice Mill APCRM6N9FC",
+      "price": 12990,
+      "brand": "AgriPro",
+      "image": "https://static1.industrybuying.com/products/agriculture-garden-landscaping/grain-processing-machine/AGR.GRA.45874693_1668212681136.webp",
+      "category": "Grain Processing Machine",
+      "quantity": 1,
+      "discount": 10
+    },
+    {
+      "id": 12,
+      "title": "AgriPro APCRM6N100-9FC21 Combined Rice Mill with Motor",
+      "price": 37990,
+      "brand": "AgriPro",
+      "image": "https://static1.industrybuying.com/products/agriculture-garden-landscaping/grain-processing-machine/AGR.GRA.86695661_1668315294535.webp",
+      "category": "Grain Processing Machine",
+      "quantity": 1,
+      "discount": 10
+    },
+    {
+      "id": 13,
+      "title": "AgriPro 3 HP Butterfly Rice Mill Machine with Motor APRM6N",
+      "price": 21990,
+      "brand": "AgriPro",
+      "image": "https://static1.industrybuying.com/products/agriculture-garden-landscaping/grain-processing-machine/AGR.GRA.105998706_1668223096609.webp",
+      "category": "Grain Processing Machine",
+      "quantity": 1,
+      "discount": 10
+    },
+    {
+      "id": 14,
+      "title": "AgriPro 1 HP Maize Thresher Machine with Motor APMZ5TY-A",
+      "price": 13800,
+      "brand": "AgriPro",
+      "image": "https://static1.industrybuying.com/products/agriculture-garden-landscaping/grain-processing-machine/AGR.GRA.95998730_1668223109524.webp",
+      "category": "Grain Processing Machine",
+      "quantity": 1,
+      "discount": 10
+    },
+    {
+      "id": 15,
+      "title": "AgriPro 3 HP Combined Rice Mill Machine With Motor",
+      "price": 29900,
+      "brand": "AgriPro",
+      "image": "https://static1.industrybuying.com/products/agriculture-garden-landscaping/grain-processing-machine/AGR.GRA.105998751_1672313192415.webp",
+      "category": "Grain Processing Machine",
+      "quantity": 1,
+      "discount": 10
+    },
+    {
+      "id": 16,
+      "title": "AgriPro 1 HP Motor for Maize Thresher Machine APMZ5TY",
+      "price": 6680,
+      "brand": "AgriPro",
+      "image": "https://static1.industrybuying.com/products/agriculture-garden-landscaping/grain-processing-machine/AGR.GRA.82335603_1672313462066.webp",
+      "category": "Grain Processing Machine",
+      "quantity": 1,
+      "discount": 10
+    },
+    {
+      "id": 17,
+      "title": "AgriPro 6N100 Rice Mill with Motor APRM6N100",
+      "price": 23900,
+      "brand": "AgriPro",
+      "image": "https://static1.industrybuying.com/products/agriculture-garden-landscaping/grain-processing-machine/AGR.GRA.36695656_1668315290623.webp",
+      "category": "Grain Processing Machine",
+      "quantity": 1,
+      "discount": 10
+    },
+    {
+      "id": 18,
+      "title": "AgriPro Rice Mill Roller Light for Butterfly Combined Rice Mill",
+      "price": 2480,
+      "brand": "AgriPro",
+      "image": "https://static1.industrybuying.com/products/agriculture-garden-landscaping/grain-processing-machine/AGR.GRA.105747383_1668203505142.webp",
+      "category": "Grain Processing Machine",
+      "quantity": 1,
+      "discount": 10
+    },
+    {
+      "id": 19,
+      "title": "AgriPro 3 HP Disc Mill Crusher with Milling Screen and Motor",
+      "price": 24800,
+      "brand": "AgriPro",
+      "image": "https://static1.industrybuying.com/products/agriculture-garden-landscaping/grain-processing-machine/AGR.GRA.75998728_1668223105289.webp",
+      "category": "Grain Processing Machine",
+      "quantity": 1,
+      "discount": 10
+    },
+    {
+      "id": 20,
+      "title": "AgriPro 3 HP Combined Rice Mill Machine without Motor",
+      "price": 21900,
+      "brand": "AgriPro",
+      "image": "https://static1.industrybuying.com/products/agriculture-garden-landscaping/grain-processing-machine/AGR.GRA.85702340_1668750002046.webp",
+      "category": "Grain Processing Machine",
+      "quantity": 1,
+      "discount": 30
+    },
+    {
+      "id": 21,
+      "title": "Agripro Long square teeth Stainless steel pack of 10 teeth",
+      "price": 1280,
+      "brand": "AgriPro",
+      "image": "https://static1.industrybuying.com/products/agriculture-garden-landscaping/grain-processing-machine/AGR.GRA.106949661_1670492928873.webp",
+      "category": "Grain Processing Machine",
+      "quantity": 1,
+      "discount": 30
+    },
+    {
+      "id": 22,
+      "title": "Agripro Short square teeth Stainless steel pack of 10 teeth",
+      "price": 818,
+      "brand": "AgriPro",
+      "image": "https://static1.industrybuying.com/products/agriculture-garden-landscaping/grain-processing-machine/AGR.GRA.66949657_1670492936095.webp",
+      "category": "Grain Processing Machine",
+      "quantity": 1,
+      "discount": 30
+    },
+    {
+      "id": 23,
+      "title": "Agripro T-tooth Stainless steel pack of 10 teeth",
+      "price": 1280,
+      "brand": "AgriPro",
+      "image": "https://static1.industrybuying.com/products/agriculture-garden-landscaping/grain-processing-machine/AGR.GRA.56949648_1670492938709.webp",
+      "category": "Grain Processing Machine",
+      "quantity": 1,
+      "discount": 30
+    },
+    {
+      "id": 24,
+      "title": "Agripro Pulley For Rice mill machine",
+      "price": 2590,
+      "brand": "AgriPro",
+      "image": "https://static1.industrybuying.com/products/agriculture-garden-landscaping/grain-processing-machine/AGR.GRA.106949026_1668353730067.webp",
+      "category": "Grain Processing Machine",
+      "quantity": 1,
+      "discount": 30
+    },
+    {
+      "id": 25,
+      "title": "AgriPro 3 HP 4in1 Combined Rice Mill Machine without Motor",
+      "price": 39900,
+      "brand": "AgriPro",
+      "image": "https://static1.industrybuying.com/products/agriculture-garden-landscaping/grain-processing-machine/AGR.GRA.95874683_1668212677463.webp",
+      "category": "Grain Processing Machine",
+      "quantity": 1,
+      "discount": 30
+    },
+    {
+      "id": 26,
+      "title": "AgriPro 3 HP 4in1 Combined Rice Mill Machine with Motor",
+      "price": 44800,
+      "brand": "AgriPro",
+      "image": "https://static1.industrybuying.com/products/agriculture-garden-landscaping/grain-processing-machine/AGR.GRA.65998744_1668223112231.webp",
+      "category": "Grain Processing Machine",
+      "quantity": 1,
+      "discount": 30
+    },
+    {
+      "id": 27,
+      "title": "AgriPro 3 HP Motor for Combined Rice Mill APCR6N409FC",
+      "price": 11900,
+      "brand": "AgriPro",
+      "image": "https://static1.industrybuying.com/products/agriculture-garden-landscaping/grain-processing-machine/AGR.GRA.105702355_1668200418326.webp",
+      "category": "Grain Processing Machine",
+      "quantity": 1,
+      "discount": 30
+    },
+    {
+      "id": 28,
+      "title": "Rico Italy Rice Mill with Motor P4RI RF 86",
+      "price": 31800,
+      "brand": "Rico Italy",
+      "image": "https://static1.industrybuying.com/products/agriculture-garden-landscaping/grain-processing-machine/AGR.GRA.45857918_1668211409477.webp",
+      "category": "Grain Processing Machine",
+      "quantity": 1,
+      "discount": 30
+    },
+    {
+      "id": 29,
+      "title": "Confider Rice Mill Machine without Motor 3 HP RMS(Single)",
+      "price": 27800,
+      "brand": "Confider Rice",
+      "image": "https://static1.industrybuying.com/products/agriculture-garden-landscaping/grain-processing-machine/AGR.GRA.55502035_1668186867204.webp",
+      "category": "Grain Processing Machine",
+      "quantity": 1,
+      "discount": 30
+    },
+    {
+      "id": 30,
+      "title": "Confider Rice Mill Machine with Normal Motor 3 HP RMS(Single)",
+      "price": 35800,
+      "brand": "Confider Rice",
+      "image": "https://static1.industrybuying.com/products/agriculture-garden-landscaping/grain-processing-machine/AGR.GRA.55502035_1668186867204.webp",
+      "category": "Grain Processing Machine",
+      "quantity": 1,
+      "discount": 10
+    },
+    {
+      "id": 31,
+      "title": "Confider Rice Mill Machine with Cg Motor 3 HP RMS(Single)",
+      "price": 46800,
+      "brand": "Confider Rice",
+      "image": "https://static1.industrybuying.com/products/agriculture-garden-landscaping/grain-processing-machine/AGR.GRA.55502035_1668186867204.webp",
+      "category": "Grain Processing Machine",
+      "quantity": 1,
+      "discount": 10
+    },
+    {
+      "id": 32,
+      "title": "Confider Combine Rice Mill Machine without Motor 3 HP",
+      "price": 39900,
+      "brand": "Confider Rice",
+      "image": "https://static1.industrybuying.com/products/agriculture-garden-landscaping/grain-processing-machine/AGR.GRA.55502035_1668186867204.webp",
+      "category": "Grain Processing Machine",
+      "quantity": 1,
+      "discount": 10
+    },
+    {
+      "id": 33,
+      "title": "Confider Combine Rice Mill Machine with Normal Motor 3 HP",
+      "price": 52800,
+      "brand": "Confider Rice",
+      "image": "https://static1.industrybuying.com/products/agriculture-garden-landscaping/grain-processing-machine/AGR.GRA.55502035_1668186867204.webp",
+      "category": "Grain Processing Machine",
+      "quantity": 1,
+      "discount": 10
+    },
+    {
+      "id": 34,
+      "title": "Confider Combine Rice Mill Machine with Cg Motor 3 HP",
+      "price": 59900,
+      "brand": "Confider Rice",
+      "image": "https://static1.industrybuying.com/products/agriculture-garden-landscaping/grain-processing-machine/AGR.GRA.55502035_1668186867204.webp",
+      "category": "Grain Processing Machine",
+      "quantity": 1,
+      "discount": 10
+    },
+    {
+      "id": 35,
+      "title": "Confider Combine Rice Mill Machine India Make 2In1 with Cg",
+      "price": 69900,
+      "brand": "Confider Rice",
+      "image": "https://static1.industrybuying.com/products/agriculture-garden-landscaping/grain-processing-machine/AGR.GRA.55502035_1668186867204.webp",
+      "category": "Grain Processing Machine",
+      "quantity": 1,
+      "discount": 10
+    },
+    {
+      "id": 36,
+      "title": "agrOMill 6N40 Domestic Rice Machine 2.2-2.6kw With Motor",
+      "price": 21800,
+      "brand": "agrOMill",
+      "image": "https://static1.industrybuying.com/products/agriculture-garden-landscaping/grain-processing-machine/AGR.GRA.25980966_1668221275708.webp",
+      "category": "Grain Processing Machine",
+      "quantity": 1,
+      "discount": 10
+    },
+    {
+      "id": 37,
+      "title": "Falcon Premium Maize Sheller FPMS-1990",
+      "price": 238,
+      "brand": "Falcon",
+      "image": "https://static1.industrybuying.com/products/agriculture-garden-landscaping/grain-processing-machine/AG.MA3.591383_1667890077399.webp",
+      "category": "Grain Processing Machine",
+      "quantity": 1,
+      "discount": 20
+    },
+    {
+      "id": 38,
+      "title": "Krost TC1 Manual Grain Seed Hand Grinder Mill",
+      "price": 1280,
+      "brand": "Krost",
+      "image": "https://static1.industrybuying.com/products/agriculture-garden-landscaping/grain-processing-machine/AGR.GRA.106719274_1668318923903.webp",
+      "category": "Grain Processing Machine",
+      "quantity": 1,
+      "discount": 20
+    },
+    {
+      "id": 39,
+      "title": "Rico Italy 3 HP Single Phase Mini Rice Mill With Motor RI6N40",
+      "price": 34800,
+      "brand": "Rico Italy",
+      "image": "https://static1.industrybuying.com/products/agriculture-garden-landscaping/grain-processing-machine/AGR.GRA.95449930_1668182962303.webp",
+      "category": "Grain Processing Machine",
+      "quantity": 1,
+      "discount": 20
+    },
+    {
+      "id": 40,
+      "title": "Sparrow B Type Wheat Sugarcane Fertilization Machine 88x44x70",
+      "price": 24600,
+      "brand": "Sparrow",
+      "image": "https://static1.industrybuying.com/products/agriculture-garden-landscaping/grain-processing-machine/AGR.GRA.102155908_1668012744604.webp",
+      "category": "Grain Processing Machine",
+      "quantity": 1,
+      "discount": 10
+    },
+    {
+      "id": 41,
+      "title": "RAJA MINI RICE MILL",
+      "price": 85900,
+      "brand": "Raja",
+      "image": "https://static1.industrybuying.com/products/agriculture-garden-landscaping/grain-processing-machine/AGR.GRA.43848496_1668086836398.webp",
+      "category": "Grain Processing Machine",
+      "quantity": 1,
+      "discount": 20
+    },
+    {
+      "id": 42,
+      "title": "RAJA NO 4 HULLER",
+      "price": 12500,
+      "brand": "Raja",
+      "image": "https://static1.industrybuying.com/products/agriculture-garden-landscaping/grain-processing-machine/AGR.GRA.73848486_1668086835998.webp",
+      "category": "Grain Processing Machine",
+      "quantity": 1,
+      "discount": 20
+    },
+    {
+      "id": 43,
+      "title": "Kisankraft 4 HP Maize Cum Dehusker Sheller",
+      "price": 19800,
+      "brand": "Kisankraft",
+      "image": "https://static1.industrybuying.com/products/agriculture-garden-landscaping/grain-processing-machine/AG.MA3.1440125_1667909338529.webp",
+      "category": "Grain Processing Machine",
+      "quantity": 1,
+      "discount": 20
+    },
+    {
+      "id": 44,
+      "title": "Kisankraft 3 - 4 HP Maize Sheller KK-MZS-01 (Without Motor)",
+      "price": 17900,
+      "brand": "Kisankraft",
+      "image": "https://static1.industrybuying.com/products/agriculture-garden-landscaping/grain-processing-machine/AG.MA3.1440126_1667909338941.webp",
+      "category": "Grain Processing Machine",
+      "quantity": 1,
+      "discount": 10
+    }
+  ],
+  "cart": [
+    {
+      "id": 1,
+      "title": "Rico Italy 3 HP Single Phase Mini Rice Mill With Motor RI6N40",
+      "price": 34800,
+      "brand": "Rico Italy",
+      "image": "https://static1.industrybuying.com/products/agriculture-garden-landscaping/grain-processing-machine/AGR.GRA.95449930_1668182962303.webp",
+      "category": "Grain Processing Machine",
+      "quantity": 1,
+      "discount": 20
+    },
+    {
+      "id": 2,
+      "title": "Sparrow B Type Wheat Sugarcane Fertilization Machine 88x44x70",
+      "price": 24600,
+      "brand": "Sparrow",
+      "image": "https://static1.industrybuying.com/products/agriculture-garden-landscaping/grain-processing-machine/AGR.GRA.102155908_1668012744604.webp",
+      "category": "Grain Processing Machine",
+      "quantity": 1,
+      "discount": 10
+    },
+    {
+      "id": 3,
+      "title": "RAJA MINI RICE MILL",
+      "price": 85900,
+      "brand": "Raja",
+      "image": "https://static1.industrybuying.com/products/agriculture-garden-landscaping/grain-processing-machine/AGR.GRA.43848496_1668086836398.webp",
+      "category": "Grain Processing Machine",
+      "quantity": 1,
+      "discount": 20
+    },
+    {
+      "id": 4,
+      "title": "RAJA NO 4 HULLER",
+      "price": 12500,
+      "brand": "Raja",
+      "image": "https://static1.industrybuying.com/products/agriculture-garden-landscaping/grain-processing-machine/AGR.GRA.73848486_1668086835998.webp",
+      "category": "Grain Processing Machine",
+      "quantity": 1,
+      "discount": 20
+    },
+    {
+      "id": 5,
+      "title": "Kisankraft 4 HP Maize Cum Dehusker Sheller",
+      "price": 19800,
+      "brand": "Kisankraft",
+      "image": "https://static1.industrybuying.com/products/agriculture-garden-landscaping/grain-processing-machine/AG.MA3.1440125_1667909338529.webp",
+      "category": "Grain Processing Machine",
+      "quantity": 1,
+      "discount": 20
+    },
+    {
+      "id": 6,
+      "title": "Kisankraft 3 - 4 HP Maize Sheller KK-MZS-01 (Without Motor)",
+      "price": 17900,
+      "brand": "Kisankraft",
+      "image": "https://static1.industrybuying.com/products/agriculture-garden-landscaping/grain-processing-machine/AG.MA3.1440126_1667909338941.webp",
+      "category": "Grain Processing Machine",
+      "quantity": 1,
+      "discount": 10
+    }
+  ]
+}

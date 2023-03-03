@@ -40,7 +40,7 @@ const addToBag=()=>{
 
        <img className={styles.img_in_div} src={data.image} alt="img" />
 
-       <img src={data.image} alt="ima" />
+       {/* <img src={data.image} alt="ima" /> */}
 
 
      </div>

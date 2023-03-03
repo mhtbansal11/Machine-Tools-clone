@@ -6,7 +6,6 @@ import {
   Flex,
   Icon,
   useColorModeValue,
-  Link,
   Drawer,
   DrawerContent,
   useDisclosure,
@@ -37,7 +36,7 @@ import {
 import {
   BiBed,
 } from 'react-icons/bi'
-
+import {Link} from "react-router-dom"
   
 const LinkItems = [
   { name: 'Agriculture Garden & Landscaping', icon: CiForkAndKnife},
@@ -45,7 +44,7 @@ const LinkItems = [
   { name: 'Office Supplies', icon: FaBoxOpen },
   { name: 'Material Handling and Packaging', icon: FaIndustry },
   { name: 'Pumps', icon: GiWindpump },
-  { name: 'Automotive Maintenance and Accessories', icon: FaCarAlt },
+  { name: 'Automotive Maintenance', icon: FaCarAlt },
   { name: 'Safety', icon: GiWinterGloves },
   { name: 'Cleaning', icon: GiVacuumCleaner },
   { name: 'Electrical', icon: BsPlugFill },
@@ -97,9 +96,14 @@ const SidebarContent = ({ onClose, ...rest }) => {
       {...rest}>
      
       {LinkItems.map((link) => (
-        <NavItem key={link.name} icon={link.icon}>
-          {link.name}
-        </NavItem>
+        
+          <NavItem key={link.name} icon={link.icon}>
+            <Link to={`/products`}>
+              {link.name}
+              </Link>
+          </NavItem>
+        
+        
       ))}
       <div className={styles.sub}>
         <div>Hello</div>

@@ -7,32 +7,32 @@ const Sidebar2_P = () => {
   const Searchurl = "https://static3.industrybuying.com/static/svg/search-icon.svg?de0f06193896";
   const [searchParams, setSearchParams] = useSearchParams();
   const initialState = searchParams.getAll("brand");
-  const [category, setCategory] = useState(initialState || []);
-
-  // console.log(category);
-  // console.log(searchParams.getAll("category"));
+   const initialOrder = searchParams.get("order")
+  const [brand, setBrand] = useState(initialState || []);
+  const [order, setOrder] = useState(initialOrder || "");
 
   const handleFilter = (e) =>{
-  let newCategory = [...category]
-  //   // if user checks any category it should be store in state
-  //   // if the category is already present pop out of the state
+  let newBrand = [...brand]
 
-    if(newCategory.includes(e.target.value)){
-        newCategory.splice(newCategory.indexOf(e.target.value),1)
+    if(newBrand.includes(e.target.value)){
+      newBrand.splice(newBrand.indexOf(e.target.value),1)
     }else{
-      newCategory.push(e.target.value)
+      newBrand.push(e.target.value)
     }
-    setCategory(newCategory);
+    setBrand(newBrand);
 };
+
+  const handleSort = (e)=>{
+    setOrder(e.target.value)
+  }
 
   useEffect(()=>{
     const params = {
-        category
-    }
-
+        brand,
+    };
+    order && (params.order = order)
     setSearchParams(params);
-
-  },[category])
+  },[brand,order])
 
 
   return (
@@ -53,40 +53,40 @@ const Sidebar2_P = () => {
         </div>
         <div className={styles.brandSearch}>
             <div>
-              <input type="Checkbox" value='AgriPro' onChange={handleFilter} checked={category.includes("AgriPro")}/>
+              <input type="Checkbox" value='AgriPro' onChange={handleFilter} checked={brand.includes("AgriPro")}/>
               <p>AgriPro</p>
             </div>
             <div>
-              <input type="Checkbox" value='Confider Rice' onChange={handleFilter} checked={category.includes("Confider Rice")}/>
+              <input type="Checkbox" value='Confider Rice' onChange={handleFilter} checked={brand.includes("Confider Rice")}/>
               <p>Confider Rice</p>
             </div>
             <div>
-              <input type="Checkbox" value='Raja' onChange={handleFilter} checked={category.includes("Raja")}/>
+              <input type="Checkbox" value='Raja' onChange={handleFilter} checked={brand.includes("Raja")}/>
               <p>Raja</p>
             </div>
             <div>
-              <input type="Checkbox" value='Rico Italy' onChange={handleFilter} checked={category.includes("Rico Italy")}/>
+              <input type="Checkbox" value='Rico Italy' onChange={handleFilter} checked={brand.includes("Rico Italy")}/>
               <p>Rico Italy</p>
             </div>
             <div>
-              <input type="Checkbox" value='Kisankraft' onChange={handleFilter} checked={category.includes("Kisankraft")}/>
-              <p>Kisankraft</p>
+              <input type="Checkbox" value='Kisankraft' onChange={handleFilter} checked={brand.includes("Kisankraft")}/>
+              <p>KISANKRAFT</p>
             </div>
             <div>
-              <input type="Checkbox" value='agrOMill' onChange={handleFilter} checked={category.includes("agrOMill")}/>
+              <input type="Checkbox" value='agrOMill' onChange={handleFilter} checked={brand.includes("agrOMill")}/>
               <p>agrOMILL</p>
             </div>
             <div>
-              <input type="Checkbox" value='Sparrow' onChange={handleFilter} checked={category.includes("Sparrow")}/>
+              <input type="Checkbox" value='Sparrow' onChange={handleFilter} checked={brand.includes("Sparrow")}/>
               <p>Sparrow</p>
             </div>
             <div>
-              <input type="Checkbox" value='Krost' onChange={handleFilter} checked={category.includes("Krost")}/>
+              <input type="Checkbox" value='Krost' onChange={handleFilter} checked={brand.includes("Krost")}/>
               <p>Krost</p>
             </div>
             <div>
-              <input type="Checkbox" value='Falcon' onChange={handleFilter} checked={category.includes("Falcon")}/>
-              <p>Falcon</p>
+              <input type="Checkbox" value='Falcon' onChange={handleFilter} checked={brand.includes("Falcon")}/>
+              <p>FALCON</p>
             </div>
         </div>
         <div className={styles.dashline}></div>
@@ -106,13 +106,13 @@ const Sidebar2_P = () => {
         <div className={styles.dashline}></div>
      {/* ----------------Price section--------------- */}   
       <h3 id={styles.brand_heading}><b>PRICE</b></h3> 
-          <div className={styles.Discount}>
+          <div className={styles.Discount} onChange={handleSort}>
             <div>
-                <input type="radio"  name="price"/>
+                <input type="radio"  name="price" value={"asc"} defaultChecked={order === "asc"} />
                 <p>Low to High</p>
               </div>
               <div>
-                <input type="radio"  name="price"/>
+                <input type="radio"  name="price" value={"desc"} defaultChecked={order === "desc"} />
                 <p>High to Low</p>
              </div>
           </div>

@@ -1,8 +1,9 @@
 .sidebar_container{
     border: 1px solid grey;
-    height:90vh;
-    width:30%;
+    /* height:150vh; */
+    /* width:100%; */
     background-color: #f3f3f3;
+    margin-top: 100px;
 }
 .Categories{
     text-decoration: none;

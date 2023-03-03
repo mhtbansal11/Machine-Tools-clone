@@ -9,7 +9,9 @@ import ProductCard from "../Components/ProductCard";
 import { useDispatch, useSelector } from "react-redux";
 import { getProductData } from "../Redux/AppReducer/action";
 import { Link } from "react-router-dom";
-import ProductPage from "./ProductPage";
+import Sidebar1_H from "../Components/Sidebar1_H";
+import Footer from "../Components/Footer";
+import { Navbar } from "../Components/Navbar";
 
 const slides = [
   {
@@ -59,11 +61,14 @@ const HomePage = () => {
 
   return (
     // API done
-    <div style={{ display: "flex" }}>
-      <div style={{ width: "30%", backgroundColor: "grey" }}>
+    <div>
+      <Navbar />
+    <div style={{ display: "flex" , rowGap:"20px"}}>
+      <div className={styles.sidebar} style={{ marginTop:"100px" , height:"100vh"}}>
         {/* SIDEBAR 1 */}
+        <Sidebar1_H />
       </div>
-      <div style={{ width: "65%", backgroundColor: "white", margin: "2%" }}>
+      <div style={{ width: "75%", backgroundColor: "white", margin: "2%", marginLeft:"5%" }}>
         <div className={styles.slider}>
           <IoIosArrowBack className="arrow left" onClick={prevSlide} />
           {slides?.map(
@@ -107,8 +112,7 @@ const HomePage = () => {
                   className={styles.main_div}
                 >
                   <Link to={`/products/${singlePro.id}`}>
-                    {" "}
-                    <ProductCard data={singlePro} />{" "}
+                    <ProductCard data={singlePro} />
                   </Link>
                 </GridItem>
               );
@@ -1057,7 +1061,21 @@ const HomePage = () => {
           </Carousel>
         </div>
       </div>
+              
+      
+      
     </div>
+    <div style={{ display: "flex" , rowGap:"20px"}}>
+      <div style={{ marginTop:"50px" }}>
+        {/* SIDEBAR 1 */}
+        <Sidebar1_H />
+      </div>
+      <div style={{ width: "75%", backgroundColor: "white", margin: "2%", marginLeft:"5%" }}>
+        <Footer  />
+      </div>
+    </div>
+    </div>
+    
   );
 };
 
