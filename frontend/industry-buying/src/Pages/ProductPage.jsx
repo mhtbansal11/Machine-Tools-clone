@@ -12,9 +12,7 @@ const ProductPage = () => {
   const productData = useSelector(store=>store.appReducer)
 
 
-  const location = useLocation();
-  const [searchParams] = useSearchParams();
-  console.log(location);
+
 
   // console.log(store)
   const location = useLocation();
