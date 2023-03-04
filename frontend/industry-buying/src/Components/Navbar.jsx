@@ -6,6 +6,7 @@ import { BsFillCartCheckFill } from "react-icons/bs";
 import { Link } from "react-router-dom";
 import { auth } from "../Pages/firebase";
 import Signout from "../Pages/Signout";
+import { LoginPage } from "../Pages/LoginPage";
 // import { auth } from './firebase';
 
 export const Navbar = () => {
@@ -59,12 +60,16 @@ export const Navbar = () => {
           </Link>
         </div>
         <div className={styles.login}>
-          <Link to={`/login`}>
-            <Button mr={4} color="white" bg={"#e45301"} _hover={{backgroundColor:"transparent"}} variant={"outline"}>
+          {/* <Link to={`/login`}> */}
+            {/* <Button mr={4} color="white" bg={"#e45301"} _hover={{backgroundColor:"transparent"}} variant={"outline"}>
               
               {userName?userName:"Login"}
+            </Button> */}
+             <Button mr={4} color="white" bg={"#e45301"} _hover={{backgroundColor:"transparent"}} variant={"outline"}>
+              
+              {userName?userName:<LoginPage/>}
             </Button>
-          </Link>
+          {/* </Link> */}
           {/* {userName?<Signout/>: */}
           <Link to={`/signup`}>
             <Button  color="white" bg={"#e45301"} _hover={{backgroundColor:"transparent"}} variant={"outline"}>
