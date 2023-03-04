@@ -6,8 +6,15 @@ import { BsFillCartCheckFill } from "react-icons/bs";
 import { Link } from "react-router-dom";
 import { auth } from "../Pages/firebase";
 
+import Signout from "../Pages/Signout";
+
+
+import Signout from "../Pages/SignOut";
 import { SignUpPage } from "../Pages/SignUpPage";
+
+import { LoginPage } from "../Pages/LoginPage";
 import SignOut from "../Pages/SignOut";
+
 // import { auth } from './firebase';
 import { LoginPage } from "../Pages/LoginPage";
 
