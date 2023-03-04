@@ -5,9 +5,11 @@ import { Button } from "@chakra-ui/react";
 import { BsFillCartCheckFill } from "react-icons/bs";
 import { Link } from "react-router-dom";
 import { auth } from "../Pages/firebase";
-import Signout from "../Pages/Signout";
-import { LoginPage } from "../Pages/LoginPage";
+
+import { SignUpPage } from "../Pages/SignUpPage";
+import SignOut from "../Pages/SignOut";
 // import { auth } from './firebase';
+import { LoginPage } from "../Pages/LoginPage";
 
 export const Navbar = () => {
   const [userName,setUserName]=useState("");
@@ -71,12 +73,12 @@ export const Navbar = () => {
             </Button>
           {/* </Link> */}
           {/* {userName?<Signout/>: */}
-          <Link to={`/signup`}>
+          
             <Button  color="white" bg={"#e45301"} _hover={{backgroundColor:"transparent"}} variant={"outline"}>
                 {/* Signup */}
-              {userName?"Sign Out":"Sign Up"}
+              {userName?<SignOut/>:<SignUpPage/>}
             </Button>
-          </Link>
+          
         {/* //    }  */}
         </div>
       </div>
