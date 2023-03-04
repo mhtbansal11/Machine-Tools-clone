@@ -1,10 +1,15 @@
-import {  Box, Button, FormControl, FormLabel, Input, Modal, ModalBody, ModalCloseButton, ModalContent, ModalFooter, ModalHeader, ModalOverlay, useDisclosure } from "@chakra-ui/react"
+import {  Box, Button, FormControl, FormLabel, Input, InputGroup, InputRightElement, Modal, ModalBody, ModalCloseButton, ModalContent, ModalFooter, ModalHeader, ModalOverlay, useDisclosure } from "@chakra-ui/react"
 import React, { useState } from "react"
 import { createUserWithEmailAndPassword,updateProfile } from 'firebase/auth';
 import { auth } from './firebase';
 import { async } from '@firebase/util';
 import { useNavigate,Link } from 'react-router-dom';
-// import industry from "../Pages/industrylogin.png"
+import { ViewIcon, ViewOffIcon } from "@chakra-ui/icons";
+import category from "../Pages/industrysign.png"
+import category2 from "../Pages/industry2.png"
+import category3 from "../Pages/industrylogo.png"
+
+
 // import { Link } from "react-router-dom";
 
 
@@ -56,7 +61,7 @@ export  function SignUpPage() {
     return (
       <>
         <Button 
-        bg={"red"}
+        bg={"none"}
         w="100%"
         onClick={onOpen}>SignUp</Button>
        
@@ -82,25 +87,44 @@ export  function SignUpPage() {
             <ModalHeader>Sign in your account</ModalHeader>
             <ModalCloseButton />
             <ModalBody pb={6}>
-              <FormControl>
-                <FormLabel>Email</FormLabel>
-                <Input ref={initialRef} placeholder='Email Address' type="email" onChange={(event)=>setValues((pre)=>({...pre,email:event.target.value}))} />
-              </FormControl>
+            <FormControl id="firstName" isRequired>
+                  <FormLabel>First Name</FormLabel>
+                  <Input type="text" onChange={(event)=>setValues((pre)=>({...pre,first_name:event.target.value}))}/>
+                </FormControl>
   
-              <FormControl mt={4}>
-                <FormLabel>Password</FormLabel>
-                <Input placeholder='Password' type="password" onChange={(event)=>setValues((pre)=>({...pre,pass:event.target.value}))} />
-              </FormControl>
+                <FormControl id="lastName">
+                  <FormLabel>Last Name</FormLabel>
+                  <Input type="text" onChange={(event)=>setValues((pre)=>({...pre,last_name:event.target.value}))} />
+                </FormControl>
+                <FormControl id="email" isRequired>
+              <FormLabel>Email address</FormLabel>
+              <Input type="email" onChange={(event)=>setValues((pre)=>({...pre,email:event.target.value}))}/>
+            </FormControl>
+            <FormControl id="password" isRequired>
+              <FormLabel>Password</FormLabel>
+              <InputGroup>
+                <Input type={showPassword ? 'text' : 'password'}onChange={(event)=>setValues((pre)=>({...pre,pass:event.target.value}))} />
+                <InputRightElement h={'full'}>
+                  <Button
+                    variant={'ghost'}
+                    onClick={() =>
+                      setShowPassword((showPassword) => !showPassword)
+                    }>
+                    {showPassword ? <ViewIcon /> : <ViewOffIcon />}
+                  </Button>
+                </InputRightElement>
+              </InputGroup>
+            </FormControl>
             </ModalBody>
   
             <ModalFooter>
                
                
               <Button onClick={handleSubmission} disabled={submitButtonDisabled} colorScheme='blue' mr={3}  >
-              Login
+              SignUp
               </Button>
-              <Link to="/signup"  >
-              <Button onClick={onClose}>SignUp</Button>
+              <Link to="/login"  >
+              <Button onClick={onClose}>Login</Button>
               </Link>
             </ModalFooter>
           </Box>
@@ -108,7 +132,11 @@ export  function SignUpPage() {
           border={"0px solid red"}
           height={"100%"} 
           >
-            <img  src={""}></img>
+            <img  src={category3}></img>
+            <img  src={category}></img>
+            <img  src={category2}></img>
+
+
             <p>{errorMess}</p>
 
           </Box>
