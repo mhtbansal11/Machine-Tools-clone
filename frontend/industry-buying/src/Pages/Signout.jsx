@@ -1,18 +1,24 @@
 import { auth } from "./firebase";
 import { signOut } from "firebase/auth";
 
+
 import React from 'react'
 
-const Signout = () => {
-    signOut(auth).then(() => {
-        // Sign-out successful.
-      }).catch((error) => {
-        // An error happened.
-      });
+const SignOut = () => {
+    const handleSubmission=()=>{
+      // const auth=getAuth()
+      signOut(auth).then(()=>{
+        console.log("Sign Out")
+      }).catch((err)=>{
+        console.log("err",err)
+      })
+    }
 
   return (
-    <div>Signout</div>
+    <div>
+      <button onClick={handleSubmission}>SignOut</button>
+    </div>
   )
 }
 
-export default Signout
+export default SignOut
