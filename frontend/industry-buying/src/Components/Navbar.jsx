@@ -5,9 +5,13 @@ import { Button } from "@chakra-ui/react";
 import { BsFillCartCheckFill } from "react-icons/bs";
 import { Link } from "react-router-dom";
 import { auth } from "../Pages/firebase";
+
 import Signout from "../Pages/SignOut";
 import { SignUpPage } from "../Pages/SignUpPage";
+
+import { LoginPage } from "../Pages/LoginPage";
 import SignOut from "../Pages/SignOut";
+
 // import { auth } from './firebase';
 
 export const Navbar = () => {
@@ -61,12 +65,16 @@ export const Navbar = () => {
           </Link>
         </div>
         <div className={styles.login}>
-          <Link to={`/login`}>
-            <Button mr={4} color="white" bg={"#e45301"} _hover={{backgroundColor:"transparent"}} variant={"outline"}>
+          {/* <Link to={`/login`}> */}
+            {/* <Button mr={4} color="white" bg={"#e45301"} _hover={{backgroundColor:"transparent"}} variant={"outline"}>
               
               {userName?userName:"Login"}
+            </Button> */}
+             <Button mr={4} color="white" bg={"#e45301"} _hover={{backgroundColor:"transparent"}} variant={"outline"}>
+              
+              {userName?userName:<LoginPage/>}
             </Button>
-          </Link>
+          {/* </Link> */}
           {/* {userName?<Signout/>: */}
           
             <Button  color="white" bg={"#e45301"} _hover={{backgroundColor:"transparent"}} variant={"outline"}>

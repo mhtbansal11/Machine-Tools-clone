@@ -1,24 +1,15 @@
-import {
-  Flex,
-  Box,
-  FormControl,
-  FormLabel,
-  Input,
-  Checkbox,
-  Stack,
-  Link,
-  Button,
-  Heading,
-  Text,
-  useColorModeValue,
-} from '@chakra-ui/react';
-import { signInWithEmailAndPassword } from 'firebase/auth';
-import { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import {  Box, Button, FormControl, FormLabel, Input, Modal, ModalBody, ModalCloseButton, ModalContent, ModalFooter, ModalHeader, ModalOverlay, useDisclosure } from "@chakra-ui/react"
+import React, { useState } from "react"
+import { useNavigate } from "react-router-dom";
 import { auth } from './firebase';
+import { signInWithEmailAndPassword } from 'firebase/auth';
+import industry from "../Pages/industrylogin.png"
+import { Link } from "react-router-dom";
 
-export default function LoginPage() {
-  const navigate=useNavigate()
+
+
+export  function LoginPage() {
+    const navigate=useNavigate()
   const [values,setValues]=useState({
     email:"",
     pass:"",
@@ -50,58 +41,81 @@ export default function LoginPage() {
   })
   };
 
+    const { isOpen, onOpen, onClose } = useDisclosure()
+  
+    const initialRef = React.useRef(null)
+    const finalRef = React.useRef(null)
+  
+    return (
+      <>
+        <Button 
+        bg={"none"}
+        onClick={onOpen}>SignIn</Button>
+        {/* <Button ml={4} ref={finalRef}>
+          I'll receive focus on close
+        </Button> */}
+  
+        <Modal
+          
+          initialFocusRef={initialRef}
+          finalFocusRef={finalRef}
+          isOpen={isOpen}
+          onClose={onClose}
+        >
+          {/* <ModalOverlay
+          bg={"white"}
+          
+          /> */}
+       
 
-  return (
-    <Flex
-      minH={'100vh'}
-      align={'center'}
-      justify={'center'}
-      bg={useColorModeValue('gray.50', 'gray.800')}>
-      <Stack spacing={8} mx={'auto'} maxW={'lg'} py={12} px={6}>
-        <Stack align={'center'}>
-          <Heading fontSize={'4xl'}>Sign in to your account</Heading>
-          <Text fontSize={'lg'} color={'gray.600'}>
-            to enjoy all of our cool <Link color={'blue.400'}>features</Link> ✌️
-          </Text>
-        </Stack>
-        <Box
-          rounded={'lg'}
-          bg={useColorModeValue('white', 'gray.700')}
-          boxShadow={'lg'}
-          p={8}>
-          <Stack spacing={4}>
-            <FormControl id="email">
-              <FormLabel>Email address</FormLabel>
-              <Input type="email" onChange={(event)=>setValues((pre)=>({...pre,email:event.target.value}))} />
-            </FormControl>
-            <FormControl id="password">
-              <FormLabel>Password</FormLabel>
-              <Input type="password" onChange={(event)=>setValues((pre)=>({...pre,pass:event.target.value}))}/>
-            </FormControl>
-            <Stack spacing={10}>
-              <Stack
-                direction={{ base: 'column', sm: 'row' }}
-                align={'start'}
-                justify={'space-between'}>
-                <Checkbox>Remember me</Checkbox>
-                <Link color={'blue.400'}>Forgot password?</Link>
-              </Stack>
-              <Button
-                bg={'blue.400'}
-                color={'white'}
-                _hover={{
-                  bg: 'blue.500',
-                }}
-                disabled={submitButtonDisabled}
-                onClick={handleSubmission}
-                >
-                Sign in
+            
+            
+          <ModalContent
+           m={"auto"}
+          >
+           <Box w={"600px"}  bg={"#fa832a"}
+          display={"flex"} >
+          <Box     
+          border={"1px solid teal"}
+          w={"50%"}
+          >
+
+            <ModalHeader>Sign in your account</ModalHeader>
+            <ModalCloseButton />
+            <ModalBody pb={6}>
+              <FormControl>
+                <FormLabel>Email</FormLabel>
+                <Input ref={initialRef} placeholder='Email Address' type="email" onChange={(event)=>setValues((pre)=>({...pre,email:event.target.value}))} />
+              </FormControl>
+  
+              <FormControl mt={4}>
+                <FormLabel>Password</FormLabel>
+                <Input placeholder='Password' type="password" onChange={(event)=>setValues((pre)=>({...pre,pass:event.target.value}))} />
+              </FormControl>
+            </ModalBody>
+  
+            <ModalFooter>
+               
+               
+              <Button onClick={handleSubmission} disabled={submitButtonDisabled} colorScheme='blue' mr={3}  >
+              Login
               </Button>
-              <p>{errorMess}</p>
-            </Stack>
-          </Stack>
-        </Box>
-      </Stack>
-    </Flex>
-  );
-}
+              <Link to="/signup"  >
+              <Button onClick={onClose}>SignUp</Button>
+              </Link>
+            </ModalFooter>
+          </Box>
+          <Box w={"50%"}
+          border={"0px solid red"}
+          height={"100%"} 
+          >
+            <img  src={industry}></img>
+            <p>{errorMess}</p>
+
+          </Box>
+          </Box>
+          </ModalContent>
+        </Modal>
+      </>
+    )
+  }
