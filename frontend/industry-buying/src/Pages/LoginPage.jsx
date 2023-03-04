@@ -50,6 +50,7 @@ export  function LoginPage() {
       <>
         <Button 
         bg={"none"}
+        w="100%"
         onClick={onOpen}>SignIn</Button>
         {/* <Button ml={4} ref={finalRef}>
           I'll receive focus on close
