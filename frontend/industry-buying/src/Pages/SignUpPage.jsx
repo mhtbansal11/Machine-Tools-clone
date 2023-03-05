@@ -18,8 +18,8 @@ import 'react-toastify/dist/ReactToastify.css';
 
 
 export  function SignUpPage({ isOpen, onOpen, onClose,lOpen}) {
-  const notify = () => toast("Wow so easy!");
-    const navigate=useNavigate()
+  // const notify = () => toast("Wow so easy!");
+    // const navigate=useNavigate()
   const [values,setValues]=useState({
     first_name:"",
     last_name:"",
@@ -50,6 +50,8 @@ export  function SignUpPage({ isOpen, onOpen, onClose,lOpen}) {
       // toast("Sign Up Successful")
       // navigate("/")
       onClose()
+     window.location.reload()
+
       
     })
     .catch((err)=>{

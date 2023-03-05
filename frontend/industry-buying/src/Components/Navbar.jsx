@@ -24,6 +24,9 @@ export const Navbar = () => {
         auth.onAuthStateChanged(async(user)=>{
           if(user){
             console.log(user)
+           
+
+
             console.log(user.displayName)
            await setUserName(user.displayName)
           //  console.log(userName)
