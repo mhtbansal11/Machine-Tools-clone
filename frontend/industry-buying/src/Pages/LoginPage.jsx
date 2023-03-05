@@ -2,7 +2,8 @@ import {  Box, Button, FormControl, FormLabel, Input, Modal, ModalBody, ModalClo
 import React, { useState } from "react"
 import { useNavigate } from "react-router-dom";
 import { auth } from './firebase';
-import { signInWithEmailAndPassword } from 'firebase/auth';
+// import { accessToken} from './firebase';
+import { onAuthStateChanged, signInWithEmailAndPassword } from 'firebase/auth';
 import industry from "../Pages/industrylogin.png"
 import { Link } from "react-router-dom";
 import { SignUpPage } from "./SignUpPage";
@@ -10,6 +11,12 @@ import { SignUpPage } from "./SignUpPage";
 
 
 export  function LoginPage({isOpen, onOpen, onClose,sOnOpen}) {
+
+
+
+
+
+
     const navigate=useNavigate()
   const [values,setValues]=useState({
     email:"",
@@ -41,15 +48,12 @@ export  function LoginPage({isOpen, onOpen, onClose,sOnOpen}) {
     //done
   })
   };
-
+    // console.log("auth dtails: ",users.accessToken)
   
   
     const initialRef = React.useRef(null)
     const finalRef = React.useRef(null)
-    const closepop=()=>{
-      
-    }
-  
+ 
     return (
       <>
         <Button 
