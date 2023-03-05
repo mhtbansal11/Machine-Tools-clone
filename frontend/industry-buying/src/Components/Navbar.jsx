@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import logo from "../logo.png";
 import styles from "./Navbar.module.css";
-import { Button } from "@chakra-ui/react";
+import { Button, useDisclosure } from "@chakra-ui/react";
 import { BsFillCartCheckFill } from "react-icons/bs";
 import { Link } from "react-router-dom";
 import { auth } from "../Pages/firebase";
@@ -16,18 +16,25 @@ import SignOut from "../Pages/SignOut";
 
 export const Navbar = () => {
   const [userName,setUserName]=useState("");
- 
+  const { isOpen, onOpen, onClose } = useDisclosure();
+  const { isOpen:sIsOpen, onOpen:sOnOpen, onClose:sOnClose } = useDisclosure();
+
 
     useEffect(()=>{
         auth.onAuthStateChanged(async(user)=>{
           if(user){
+            console.log(user)
+            console.log(user.displayName)
            await setUserName(user.displayName)
-            console.log(userName)
-          }else setUserName("")
+          //  console.log(userName)
+           }else setUserName("")
         
         })
         
       },[])
+        //  userName? window.location.reload():console.log("not auhorised")
+          
+
   const Searchurl =
     "https://static3.industrybuying.com/static/svg/search-icon.svg?de0f06193896";
   return (
@@ -65,24 +72,19 @@ export const Navbar = () => {
           </Link>
         </div>
         <div className={styles.login}>
-          {/* <Link to={`/login`}> */}
-            {/* <Button mr={4} color="white" bg={"#e45301"} _hover={{backgroundColor:"transparent"}} variant={"outline"}>
-              
-              {userName?userName:"Login"}
-            </Button> */}
+       
              <Button mr={4} color="white" bg={"#e45301"} _hover={{backgroundColor:"transparent"}} variant={"outline"}>
               
-              {userName?userName:<LoginPage/>}
+              {userName?userName:<LoginPage isOpen={isOpen} onClose={onClose} onOpen={onOpen} sOnOpen={sOnOpen} />}
             </Button>
-          {/* </Link> */}
-          {/* {userName?<Signout/>: */}
+       
           
             <Button  color="white" bg={"#e45301"} _hover={{backgroundColor:"transparent"}} variant={"outline"}>
-                {/* Signup */}
-              {userName?<SignOut/>:<SignUpPage/>}
+          
+              {userName?<SignOut/>:<SignUpPage isOpen={sIsOpen} onClose={sOnClose} onOpen={sOnOpen} lOpen={onOpen} />}
             </Button>
           
-        {/* //    }  */}
+        
         </div>
       </div>
     </div>
