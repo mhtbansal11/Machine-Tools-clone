@@ -50,7 +50,7 @@ export default function Signup() {
      await updateProfile(user,{
         displayName:values.first_name,
       })
-      navigate("/login")
+      navigate("/")
     })
     .catch((err)=>{
     setSubmitButtonDisabled(false);

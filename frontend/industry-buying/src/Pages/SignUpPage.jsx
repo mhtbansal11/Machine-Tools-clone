@@ -8,13 +8,17 @@ import { ViewIcon, ViewOffIcon } from "@chakra-ui/icons";
 import category from "../Pages/industrysign.png"
 import category2 from "../Pages/industry2.png"
 import category3 from "../Pages/industrylogo.png"
+import { LoginPage } from "./LoginPage";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 
 // import { Link } from "react-router-dom";
 
 
 
-export  function SignUpPage() {
+export  function SignUpPage({ isOpen, onOpen, onClose,lOpen}) {
+  const notify = () => toast("Wow so easy!");
     const navigate=useNavigate()
   const [values,setValues]=useState({
     first_name:"",
@@ -43,7 +47,10 @@ export  function SignUpPage() {
      await updateProfile(user,{
         displayName:values.first_name,
       })
-      navigate("/login")
+      // toast("Sign Up Successful")
+      // navigate("/")
+      onClose()
+      
     })
     .catch((err)=>{
     setSubmitButtonDisabled(false);
@@ -53,7 +60,7 @@ export  function SignUpPage() {
   };
   const [showPassword, setShowPassword] = useState(false);
 
-    const { isOpen, onOpen, onClose } = useDisclosure()
+    
   
     const initialRef = React.useRef(null)
     const finalRef = React.useRef(null)
@@ -66,7 +73,7 @@ export  function SignUpPage() {
         onClick={onOpen}>SignUp</Button>
        
         <Modal
-          
+          // bg="teal"
           initialFocusRef={initialRef}
           finalFocusRef={finalRef}
           isOpen={isOpen}
@@ -84,8 +91,8 @@ export  function SignUpPage() {
           w={"50%"}
           >
 
-            <ModalHeader>Sign in your account</ModalHeader>
-            <ModalCloseButton />
+            <ModalHeader>Sign Up With New account</ModalHeader>
+            {/* <ModalCloseButton bg={"blue"}  /> */}
             <ModalBody pb={6}>
             <FormControl id="firstName" isRequired>
                   <FormLabel>First Name</FormLabel>
@@ -123,9 +130,9 @@ export  function SignUpPage() {
               <Button onClick={handleSubmission} disabled={submitButtonDisabled} colorScheme='blue' mr={3}  >
               SignUp
               </Button>
-              <Link to="/login"  >
-              <Button onClick={onClose}>Login</Button>
-              </Link>
+              
+              <Button  onClick={() => (lOpen(), onClose())} ><LoginPage/></Button>
+              
             </ModalFooter>
           </Box>
           <Box w={"50%"}

@@ -5,10 +5,11 @@ import { auth } from './firebase';
 import { signInWithEmailAndPassword } from 'firebase/auth';
 import industry from "../Pages/industrylogin.png"
 import { Link } from "react-router-dom";
+import { SignUpPage } from "./SignUpPage";
 
 
 
-export  function LoginPage() {
+export  function LoginPage({isOpen, onOpen, onClose,sOnOpen}) {
     const navigate=useNavigate()
   const [values,setValues]=useState({
     email:"",
@@ -31,7 +32,7 @@ export  function LoginPage() {
     signInWithEmailAndPassword(auth,values.email,values.pass).then(async(res)=>{
       setSubmitButtonDisabled(false)
       
-    
+       onClose()
       navigate("/")
     })
     .catch((err)=>{
@@ -41,10 +42,13 @@ export  function LoginPage() {
   })
   };
 
-    const { isOpen, onOpen, onClose } = useDisclosure()
+  
   
     const initialRef = React.useRef(null)
     const finalRef = React.useRef(null)
+    const closepop=()=>{
+      
+    }
   
     return (
       <>
@@ -67,9 +71,6 @@ export  function LoginPage() {
           
           /> */}
        
-
-            
-            
           <ModalContent
            m={"auto"}
           >
@@ -81,7 +82,6 @@ export  function LoginPage() {
           >
 
             <ModalHeader>Sign in your account</ModalHeader>
-            <ModalCloseButton />
             <ModalBody pb={6}>
               <FormControl>
                 <FormLabel>Email</FormLabel>
@@ -100,15 +100,18 @@ export  function LoginPage() {
               <Button onClick={handleSubmission} disabled={submitButtonDisabled} colorScheme='blue' mr={3}  >
               Login
               </Button>
-              <Link to="/signup"  >
-              <Button onClick={onClose}>SignUp</Button>
-              </Link>
+              
+              <Button onClick={() =>(sOnOpen(), onClose())} ><SignUpPage/></Button>
+              
             </ModalFooter>
           </Box>
           <Box w={"50%"}
           border={"0px solid red"}
           height={"100%"} 
+          display="flex"
           >
+            {/* <ModalCloseButton /> */}
+
             <img  src={industry}></img>
             <p>{errorMess}</p>
 
