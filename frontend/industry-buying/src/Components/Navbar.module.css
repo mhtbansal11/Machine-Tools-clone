@@ -7,7 +7,7 @@
     justify-content: space-between;
     align-items: center;
     background-color: #222f3e;
-    padding: 1% ;
+    /* padding: 1% ; */
     position: fixed;
     z-index: 10;
     padding-left: 2%;
@@ -30,34 +30,22 @@
 .start h1{
     font-size: 25px;
 }
-.start .select select{
-    background-color: #e45301;
-    color: white;
-    padding: 2%;
-    border-radius: 4px;
-}
-.end{
-    width: 50%;
-    display: flex;
-    align-items: center;
-    /* border: 1px solid white; */
-    justify-content: space-evenly;
-}
-.end img{
-    width: 5%;
 
-}
-.search{
-    width: 50%;
-    /* border: 1px solid pink; */
+.login{
     display: flex;
-}
-.search input{
-width: 90%;
-border: 1px solid #e45301;
-    padding: 1% 2% 1% 2%;
-    border-radius: 4px;
-    margin-left: 10px;
-    align-items: center;
+    justify-content: center;
+    width: 25%;
 }
 
+.cart{
+    margin-right: 20px;
+}
+
+.mobile{
+    display: flex;
+    
+    width:70%
+}
+.mobile img{
+    width: 20%;
+}
