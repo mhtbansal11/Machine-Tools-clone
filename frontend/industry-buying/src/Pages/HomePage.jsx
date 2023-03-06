@@ -68,7 +68,7 @@ const HomePage = () => {
         {/* SIDEBAR 1 */}
         <Sidebar1_H />
       </div>
-      <div style={{ width: "75%", backgroundColor: "white", margin: "2%", marginLeft:"5%" }}>
+      <div style={{ width: "75%", backgroundColor: "white", margin: "2%", marginLeft:"2%" }}>
         <div className={styles.slider}>
           <IoIosArrowBack className="arrow left" onClick={prevSlide} />
           {slides?.map(
@@ -1066,11 +1066,11 @@ const HomePage = () => {
       
     </div>
     <div style={{ display: "flex" , rowGap:"20px"}}>
-      <div style={{ marginTop:"50px" }}>
+      <div style={{ marginTop:"50px", width:"20%" }}>
         {/* SIDEBAR 1 */}
-        <Sidebar1_H />
+        {/* <Sidebar1_H /> */}
       </div>
-      <div style={{ width: "75%", backgroundColor: "white", margin: "2%", marginLeft:"5%" }}>
+      <div style={{ width: "80%", backgroundColor: "white", margin: "2%", marginLeft:"5%" }}>
         <Footer  />
       </div>
     </div>

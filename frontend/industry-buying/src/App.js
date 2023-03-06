@@ -36,7 +36,7 @@ function App() {
     {/* <ProductPage /> */}
     {/* <Navbar /> */}
    <AllRoutes/>
-   
+   {/* <Footer/> */}
     
     </div>
   );

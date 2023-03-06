@@ -108,7 +108,7 @@ const SidebarContent = ({ onClose, ...rest }) => {
       <div className={styles.sub}>
         <div>Hello</div>
       </div>
-      <a className={styles.Categories} href="">See All Categories</a>
+      <p className={styles.Categories}>See All Categories</p>
       <div className={styles.offer}>
         <div>
           <img src="https://static3.industrybuying.com/homepage/1650521467istockphoto-643063772-612x612%20(2).jpg" alt="offer" />
