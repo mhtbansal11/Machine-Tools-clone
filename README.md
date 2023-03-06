@@ -79,7 +79,7 @@ Worked on Product Page and single Product card
 
 ### Mohit Bansal
 > Github: [mhtbansal11](https://github.com/mhtbansal11)
-Worked on navbar, homepage and footer
+Worked on navbar, homepage, footer and Backend API
 
 ### ABHISEK KUMAR
 > Github: [Abhisek753](https://github.com/Abhisek753)
