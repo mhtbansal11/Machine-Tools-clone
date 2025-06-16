@@ -147,10 +147,7 @@ export const Cart = () => {
                 <TbDiscount2 />
               </div>
             </div>
-            {/* <InputGroup size='sm'>
-          <Input placeholder='Enter Coupon Code' focusBorderColor='black'/>
-          <InputRightElement children={'Apply'} color="orange" bg="none" mr="4"/>
-        </InputGroup> */}
+            
             <Stack spacing={4} mt="8px">
               <InputGroup w={"90%"} m="auto">
                 <Input
@@ -163,11 +160,7 @@ export const Cart = () => {
                 <InputRightElement children={"Apply"} color="#E45301" mr="4" />
               </InputGroup>
             </Stack>
-            {/* <Box display={"flex"} w={"90%"} margin="auto" mt="8px" alignItems={"center"} justifyContent="space-between">
-                  <Box>GREENSOUL300</Box>
-                  <Button onClick={handleCoupon}>Apply</Button>
-          </Box> */}
-
+           
             <Box>
               {/* <Button onClick={onOpen}>Open Modal</Button> */}
               <Box
